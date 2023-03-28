@@ -32,8 +32,62 @@ Finally, we want to use an API to perform search queries and display results. Th
 
 By leveraging APIs, we can streamline the buying process and provide a better experience for users. With the right APIs in place, we can create a seamless, user-friendly ecommerce website that is both secure and scalable.
 
-
-
-
-
 # APIDRIVEN_ECOMMERCE_WEBSITE
+
+Work Flow:
+
+Initialize the website with the necessary libraries and dependencies.
+Set up the database to store product and user information.
+Create the homepage with links to product listings and user account features.
+Implement the product listing page, which pulls data from the database and displays it in a grid or list format.
+Implement the product details page, which displays detailed information about a selected product and allows users to add it to their shopping cart.
+Create the shopping cart feature, which allows users to add, remove, and modify items in their cart.
+Implement the checkout process, which collects user information and payment details and submits the order to the database.
+Create the user account feature, which allows users to create an account, log in, and view their order history.
+Implement search functionality, which allows users to search for products using keywords or filters.
+Implement security measures, such as encryption and authentication, to protect user data and prevent unauthorized access.
+
+Start
+|
+V
+Create Homepage
+|
+V
+Create Product Listing Page
+|
+V
+Create Product Details Page
+|
+V
+Create Shopping Cart Feature
+|
+V
+Implement Checkout Process
+|
+V
+Create User Account Feature
+|
+V
+Implement Search Functionality
+|
+V
+Implement Security Measures
+|
+V
+End
+
+Color Palette:
+
+HEX: #be0027
+
+HEX: #cf8d2e
+
+HEX: #e4e932
+
+HEX: #2c9f45
+
+HEX: #371777
+
+HEX: #52325d
+
+HEX: #511378
