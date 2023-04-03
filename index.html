@@ -8,10 +8,13 @@
   <meta name="E-Commerce Website" content="Online-Shopping">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
+
   <!-- Price Slider Stylesheets -->
   <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/hub/2-0/vendor/nouislider/nouislider.css">
   <!-- Swiper Slider Stylesheets -->
   <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/hub/2-0/vendor/swiper/swiper-bundle.css">
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <!-- Leaflet Stylesheets -->
   <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/hub/2-0/vendor/leaflet/leaflet.css">
   <!-- Parallax Stylesheets -->
@@ -33,6 +36,43 @@
   <link rel="shortcut icon" href="assets/images/favicon/ms-icon-150x150-removebg-preview.png">
   <!-- Google fonts-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700&amp;display=swap">
+
+  <style>
+    .nav-link .svg-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .cart-no,
+    .wishlist-no {
+      position: absolute;
+      top: -6px;
+      right: -8px;
+      font-size: 0.75rem;
+      background-color: red;
+      color: white;
+      padding: 2px 4px;
+      border-radius: 50%;
+    }
+
+    .dropdown-item .product-icons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn-indigo-transparent {
+      background-color: rgba(75, 0, 130, 0.1);
+      color: #4b0082;
+    }
+
+    .btn-indigo-transparent:hover {
+      background-color: rgba(75, 0, 130, 0.25);
+      color: #4b0082;
+    }
+  </style>
+
+
 </head>
 
 <body>
@@ -69,6 +109,7 @@
       </div>
     </div>
   </header>
+
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-4 px-lg-4">
     <div class="container-fluid"><a class="navbar-brand" href="index.html"><img src="assets/images/logo/logo.svg"
           alt="website-logo" width="75"></a>
@@ -134,36 +175,33 @@
 
         </ul>
         <ul class="navbar-nav flex-row mb-2 mb-lg-0 ms-lg-5 actions-nav-menu">
-          <li class="nav-item mx-2 mx-lg-0 px-lg-0"><a class="nav-link closeSearch" href="#" onclick="openSearch()">
-              <svg class="svg-icon">
-                <use xlink:href="#find-1"> </use>
-              </svg></a></li>
-          <li class="nav-item mx-2 mx-lg-0 px-lg-0"><a class="nav-link" href="customer-login.html">
-              <svg class="svg-icon">
-                <use xlink:href="#user-1"> </use>
-              </svg></a></li>
-          <li class="nav-item dropdown mx-2 mx-lg-0 px-lg-0 d-block d-lg-none"><a class="nav-link position-relative"
-              href="cart.html">
-              <svg class="svg-icon">
-                <use xlink:href="#cart-1"> </use>
-              </svg><span class="cart-no">1</span></a></li>
-          <li class="nav-item dropdown mx-2 mx-lg-0 px-3 px-lg-0 d-none d-lg-block"><a
-              class="nav-link position-relative dropdown-toggle no-caret" id="cartDropdown" href="#"
+
+
+
+          <!-- Replace this part of your existing navbar -->
+          <li class="nav-item dropdown mx-2 mx-lg-0 px-3 px-lg-0 d-none d-lg-block">
+            <a class="nav-link position-relative dropdown-toggle no-caret" id="cartDropdown" href="#"
               data-bs-toggle="dropdown" aria-expanded="false">
-              <svg class="svg-icon">
-                <use xlink:href="#cart-1"> </use>
-              </svg><span class="cart-no">1</span></a>
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-no">1</span>
+            </a>
             <div class="dropdown-menu dropdown-menu-end mt-lg-4 p-4" aria-labelledby="cartDropdown">
               <div class="dropdown-item no-hover d-flex justify-content-between px-0 pb-3">
-                <div class="d-flex me-2"><a class="d-block bg-light p-2" href="detail.html"><img
+                <div class="d-flex me-2">
+                  <a class="d-block bg-light p-2" href="detail.html"><img
                       src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg" alt=""
                       width="60"></a>
                   <div class="ms-2">
                     <h5 class="mb-1"><a class="reset-anchor" href="detail.html">Heather Gray Hoodie</a></h5>
-                    <p class="small text-gray-6 mb-1">Quantity: 1</p>
-                    <h6 class="mb-0">$75.00 </h6>
+                    <p class="small text-gray-6 mb-1">Size: M</p>
+                    <div class="d-flex align-items-center">
+                      <input type="number" class="form-control form-control-sm me-2" min="1" value="1"
+                        style="width: 60px;">
+                      <h6 class="mb-0">$75.00</h6>
+                    </div>
                   </div>
-                </div><a class="reset-anchor ms-4" href="#"><i class="far fa-trash-alt"></i></a>
+                </div>
+                <a class="reset-anchor ms-4" href="#"><i class="far fa-trash-alt"></i></a>
               </div>
               <div class="dropdown-item no-hover border-top border-bottom border-gray-3 px-0 py-2">
                 <div class="d-flex justify-content-between align-items-center">
@@ -179,67 +217,24 @@
               </div>
             </div>
           </li>
+
+
         </ul>
       </div>
-    </div>
   </nav>
-  <div class="search-panel d-none" id="searchPanel">
-    <div class="search-panel-inner p-4">
-      <div class="seach-panel-close">
-        <button class="btn btn-primary rounded-0 shadow-0 p-2" id="searchCloseBtn" type="button"
-          onclick="closeSearch()">
-          <svg class="svg-icon text-white mt-1">
-            <use xlink:href="#close-1"> </use>
-          </svg>
-        </button>
-      </div>
-      <form class="w-100" action="#">
-        <div class="row">
-          <div class="col-lg-7 mx-auto">
-            <div class="d-flex align-items-center mb-3 border-bottom">
-              <input class="form-control form-control-lg bg-none border-0 shadow-0 rounded-0 px-0" type="text"
-                placeholder="What are you searching for" aria-describedby="button-addon2">
-              <button class="btn btn-link text-dark shadow-0 px-0 text-decoration-none" id="button-addon2"
-                type="submit"><i class="fas fa-search"></i></button>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
+  </header>
+
   <!-- HERO SECTION-->
   <section>
     <!-- Hero slider-->
-    <div class="swiper-container hero-slider">
+    <div class=" swiper-container hero-slider">
       <div class="swiper-wrapper">
-        <div class="swiper-slide d-flex align-items-center has-pattern bg-center bg-cover"
-          style="background: url(https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hero-bg.5200adf0.jpg);">
-          <div class="container py-6">
-            <div class="row py-5">
-              <div class="col-xl-6">
-                <h1 class="heading-lg text-shadow">Men's</h1>
-                <ul class="lead">
-                  <li class="text-decoration-none">Elevate your style with our exclusive collection of men's fashion.
-                  </li>
-                  <li class="text-decoration-none">From casual wear to formal attire, we have everything you need to
-                    look and feel your best.</li>
-                  <li class="text-decoration-none">Shop now and discover the latest trends in men's fashion.</li>
-                </ul>
-                <a class="btn btn-primary px-5" href="category.html">Shop Now
-                  <svg class="svg-icon svg-icon-sm svg-icon-heavy ms-2">
-                    <use xlink:href="#shopping-bag-1"> </use>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="swiper-slide d-flex align-items-center bg-center bg-cover"
-          style="background: url(https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hero-bg-2.2f194b95.jpg);">
+          style="background: url(assets/images/carousel/mens.jpg);">
           <div class="container py-6">
             <div class="row py-5">
               <div class="col-xl-6 text-white">
-                <h1 class="heading-lg text-shadow">Fashion</h1>
+                <h1 class="heading-lg text-shadow animate__animated animate__fadeInDown">Men's</h1>
                 <p class="lead">"Make a statement with our fashion-forward collection that reflects your unique
                   personality"
                   <br>
@@ -256,17 +251,41 @@
           </div>
         </div>
         <div class="swiper-slide d-flex align-items-center bg-center bg-cover"
-          style="background: url(https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hero-bg-3.007af9c6.jpg);">
+          style="background: url(assets/images/carousel/womens.jpg);">
           <div class="container py-6">
             <div class="row py-5">
               <div class="col-xl-6 text-white">
-                <h1 class="heading-lg text-shadow">Health & Wellness</h1>
-                <p class="lead">"Take charge of your health with our range of natural and organic products that nourish
+                <h1 class="heading-lg text-shadow">Women's</h1>
+                <p class="lead">"Make a statement with our fashion-forward collection that reflects your unique
+                  personality"
+                  <br>
+                  "Elevate your fashion game with our selection of high-quality clothing and accessories"
+                  <br>
+                  "Find your perfect fit with our extensive range of sizes, styles, and colors that cater to every
+                  taste"
+                </p><a class="btn btn-primary px-5" href="category.html">Shop Now
+                  <svg class="svg-icon svg-icon-sm svg-icon-heavy ms-2">
+                    <use xlink:href="#shopping-bag-1"> </use>
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide d-flex align-items-center bg-center bg-cover"
+          style="background: url(assets/images/carousel/kids.jpg);">
+          <div class="container py-6">
+            <div class="row py-5">
+              <div class="col-xl-6 text-white">
+                <h1 class="heading-lg text-shadow">Kid's</h1>
+                <p class="lead">"Take charge of your health with our range of natural and organic products that
+                  nourish
                   from within"
                   <br>
-                  "Experience a holistic approach to well-being with our selection of mind and body wellness products"
+                  "Experience a holistic approach to well-being with our selection of mind and body wellness
+                  products"
                   <br>
-                  "Transform your home into a sanctuary of calm and relaxation with our wellness-inspired home goods"
+                  "Transform your home into a sanctuary of calm and relaxation with our wellness-inspired home
+                  goods"
                 </p><a class="btn btn-primary px-5" href="category.html">Shop Now
                   <svg class="svg-icon svg-icon-sm svg-icon-heavy ms-2">
                     <use xlink:href="#shopping-bag-1"> </use>
@@ -315,6 +334,9 @@
       </div>
     </div>
   </section>
+
+
+
   <!-- Men's Collection -->
   <section class="men-collection bg-light py-5">
     <div class="container py-5">
@@ -323,6 +345,7 @@
         <h2 class="text-uppercase">Men Collection</h2>
       </header>
       <!-- Products Slider-->
+      <div class="swiper-wrapper" id="swiperContainer"></div>
       <div class="swiper-container products-slider">
         <div class="swiper-wrapper">
           <!-- item-->
@@ -331,10 +354,16 @@
               <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
                   src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg" alt="product">
                 <div class="hover-overlay d-flex align-items-center justify-content-center">
-                  <div class="CTA d-flex align-items-center justify-content-center"><a href="#"><i
-                        class="fas fa-shopping-cart"></i></a><a class="active" href="detail.html"><i
-                        class="fas fa-search"></i> View</a><a href="#" data-bs-toggle="modal"
-                      data-bs-target="#productView"><i class="fas fa-expand"></i></a></div>
+                  <div class="CTA d-flex align-items-center justify-content-center">
+                    <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="fas fa-shopping-cart"></i></a>
+                    <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="far fa-heart"></i></a>
+                  </div>
                 </div>
               </div>
               <div class="pt-3"><a class="reset-anchor" href="detail.html">
@@ -347,10 +376,16 @@
               <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
                   src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-2.2e56091b.jpg" alt="product">
                 <div class="hover-overlay d-flex align-items-center justify-content-center">
-                  <div class="CTA d-flex align-items-center justify-content-center"><a href="#"><i
-                        class="fas fa-shopping-cart"></i></a><a class="active" href="detail.html"><i
-                        class="fas fa-search"></i> View</a><a href="#" data-bs-toggle="modal"
-                      data-bs-target="#productView"><i class="fas fa-expand"></i></a></div>
+                  <div class="CTA d-flex align-items-center justify-content-center">
+                    <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="fas fa-shopping-cart"></i></a>
+                    <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="far fa-heart"></i></a>
+                  </div>
                 </div>
               </div>
               <div class="pt-3"><a class="reset-anchor" href="detail.html">
@@ -363,10 +398,16 @@
               <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
                   src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-3.7f2b589d.jpg" alt="product">
                 <div class="hover-overlay d-flex align-items-center justify-content-center">
-                  <div class="CTA d-flex align-items-center justify-content-center"><a href="#"><i
-                        class="fas fa-shopping-cart"></i></a><a class="active" href="detail.html"><i
-                        class="fas fa-search"></i> View</a><a href="#" data-bs-toggle="modal"
-                      data-bs-target="#productView"><i class="fas fa-expand"></i></a></div>
+                  <div class="CTA d-flex align-items-center justify-content-center">
+                    <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="fas fa-shopping-cart"></i></a>
+                    <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="far fa-heart"></i></a>
+                  </div>
                 </div>
               </div>
               <div class="pt-3"><a class="reset-anchor" href="detail.html">
@@ -379,10 +420,16 @@
               <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
                   src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-4.702b9b2c.jpg" alt="product">
                 <div class="hover-overlay d-flex align-items-center justify-content-center">
-                  <div class="CTA d-flex align-items-center justify-content-center"><a href="#"><i
-                        class="fas fa-shopping-cart"></i></a><a class="active" href="detail.html"><i
-                        class="fas fa-search"></i> View</a><a href="#" data-bs-toggle="modal"
-                      data-bs-target="#productView"><i class="fas fa-expand"></i></a></div>
+                  <div class="CTA d-flex align-items-center justify-content-center">
+                    <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="fas fa-shopping-cart"></i></a>
+                    <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="far fa-heart"></i></a>
+                  </div>
                 </div>
               </div>
               <div class="pt-3"><a class="reset-anchor" href="detail.html">
@@ -395,10 +442,16 @@
               <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
                   src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg" alt="product">
                 <div class="hover-overlay d-flex align-items-center justify-content-center">
-                  <div class="CTA d-flex align-items-center justify-content-center"><a href="#"><i
-                        class="fas fa-shopping-cart"></i></a><a class="active" href="detail.html"><i
-                        class="fas fa-search"></i> View</a><a href="#" data-bs-toggle="modal"
-                      data-bs-target="#productView"><i class="fas fa-expand"></i></a></div>
+                  <div class="CTA d-flex align-items-center justify-content-center">
+                    <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="fas fa-shopping-cart"></i></a>
+                    <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="far fa-heart"></i></a>
+                  </div>
                 </div>
               </div>
               <div class="pt-3"><a class="reset-anchor" href="detail.html">
@@ -411,10 +464,16 @@
               <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
                   src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-2.2e56091b.jpg" alt="product">
                 <div class="hover-overlay d-flex align-items-center justify-content-center">
-                  <div class="CTA d-flex align-items-center justify-content-center"><a href="#"><i
-                        class="fas fa-shopping-cart"></i></a><a class="active" href="detail.html"><i
-                        class="fas fa-search"></i> View</a><a href="#" data-bs-toggle="modal"
-                      data-bs-target="#productView"><i class="fas fa-expand"></i></a></div>
+                  <div class="CTA d-flex align-items-center justify-content-center">
+                    <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="fas fa-shopping-cart"></i></a>
+                    <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="far fa-heart"></i></a>
+                  </div>
                 </div>
               </div>
               <div class="pt-3"><a class="reset-anchor" href="detail.html">
@@ -426,7 +485,9 @@
         <div class="swiper-pagination"></div>
       </div>
     </div>
+    </div>
   </section>
+
   <!-- Divider Section-->
   <section class="py-5 bg-cover"
     style="background: url(https://d19m59y37dris4.cloudfront.net/hub/2-0/img/divider-bg.003aff07.jpg);">
@@ -444,11 +505,11 @@
     </div>
   </section>
   <!-- Women's Collection -->
-  <section class="py-5">
+  <section class="men-collection bg-light py-5">
     <div class="container py-5">
       <header class="text-center mb-5 pb-4">
-        <p class="lead text-uppercase text-muted mb-0">Ladies' Time</p>
-        <h2 class="text-uppercase">Women Collection</h2>
+        <p class="lead text-uppercase text-muted mb-0">Autumn Choice</p>
+        <h2 class="text-uppercase">Women's Collection</h2>
       </header>
       <!-- Products Slider-->
       <div class="swiper-container products-slider">
@@ -457,97 +518,133 @@
           <div class="swiper-slide">
             <div class="product mb-5">
               <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
-                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-woman-1.cf4c925d.jpg" alt="product">
+                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg" alt="product">
                 <div class="hover-overlay d-flex align-items-center justify-content-center">
-                  <div class="CTA d-flex align-items-center justify-content-center"><a href="#"><i
-                        class="fas fa-shopping-cart"></i></a><a class="active" href="detail.html"><i
-                        class="fas fa-search"></i> View</a><a href="#" data-toggle="modal"
-                      data-bs-target="#productView"><i class="fas fa-expand"></i></a></div>
+                  <div class="CTA d-flex align-items-center justify-content-center">
+                    <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="fas fa-shopping-cart"></i></a>
+                    <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="far fa-heart"></i></a>
+                  </div>
                 </div>
               </div>
               <div class="pt-3"><a class="reset-anchor" href="detail.html">
-                  <h3 class="h6 text-uppercase mb-0">Elegant Gray</h3>
-                </a><span class="price text-muted">$40.00</span></div>
+                  <h3 class="h6 mb-0 text-uppercase">Elegant Lake</h3>
+                </a><span class="text-muted">$40.00</span></div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="product mb-5">
               <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
-                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-woman-2.1ed521e4.jpg" alt="product">
+                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-2.2e56091b.jpg" alt="product">
                 <div class="hover-overlay d-flex align-items-center justify-content-center">
-                  <div class="CTA d-flex align-items-center justify-content-center"><a href="#"><i
-                        class="fas fa-shopping-cart"></i></a><a class="active" href="detail.html"><i
-                        class="fas fa-search"></i> View</a><a href="#" data-toggle="modal"
-                      data-bs-target="#productView"><i class="fas fa-expand"></i></a></div>
+                  <div class="CTA d-flex align-items-center justify-content-center">
+                    <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="fas fa-shopping-cart"></i></a>
+                    <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="far fa-heart"></i></a>
+                  </div>
                 </div>
               </div>
               <div class="pt-3"><a class="reset-anchor" href="detail.html">
-                  <h3 class="h6 text-uppercase mb-0">Elegant Black</h3>
-                </a><span class="price text-muted">$40.00</span></div>
+                  <h3 class="h6 mb-0 text-uppercase">Elegant Blue</h3>
+                </a><span class="text-muted">$40.00</span></div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="product mb-5">
               <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
-                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-woman-3.a1233824.jpg" alt="product">
+                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-3.7f2b589d.jpg" alt="product">
                 <div class="hover-overlay d-flex align-items-center justify-content-center">
-                  <div class="CTA d-flex align-items-center justify-content-center"><a href="#"><i
-                        class="fas fa-shopping-cart"></i></a><a class="active" href="detail.html"><i
-                        class="fas fa-search"></i> View</a><a href="#" data-toggle="modal"
-                      data-bs-target="#productView"><i class="fas fa-expand"></i></a></div>
+                  <div class="CTA d-flex align-items-center justify-content-center">
+                    <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="fas fa-shopping-cart"></i></a>
+                    <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="far fa-heart"></i></a>
+                  </div>
                 </div>
               </div>
               <div class="pt-3"><a class="reset-anchor" href="detail.html">
-                  <h3 class="h6 text-uppercase mb-0">Elegant Blue</h3>
-                </a><span class="price text-muted">$40.00</span></div>
+                  <h3 class="h6 mb-0 text-uppercase">Elegant Black</h3>
+                </a><span class="text-muted">$40.00</span></div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="product mb-5">
               <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
-                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-woman-4.cb533636.jpg" alt="product">
+                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-4.702b9b2c.jpg" alt="product">
                 <div class="hover-overlay d-flex align-items-center justify-content-center">
-                  <div class="CTA d-flex align-items-center justify-content-center"><a href="#"><i
-                        class="fas fa-shopping-cart"></i></a><a class="active" href="detail.html"><i
-                        class="fas fa-search"></i> View</a><a href="#" data-toggle="modal"
-                      data-bs-target="#productView"><i class="fas fa-expand"></i></a></div>
+                  <div class="CTA d-flex align-items-center justify-content-center">
+                    <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="fas fa-shopping-cart"></i></a>
+                    <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="far fa-heart"></i></a>
+                  </div>
                 </div>
               </div>
               <div class="pt-3"><a class="reset-anchor" href="detail.html">
-                  <h3 class="h6 text-uppercase mb-0">Elegant Lake</h3>
-                </a><span class="price text-muted">$40.00</span></div>
+                  <h3 class="h6 mb-0 text-uppercase">Elegant Gray</h3>
+                </a><span class="text-muted">$40.00</span></div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="product mb-5">
               <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
-                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-woman-1.cf4c925d.jpg" alt="product">
+                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg" alt="product">
                 <div class="hover-overlay d-flex align-items-center justify-content-center">
-                  <div class="CTA d-flex align-items-center justify-content-center"><a href="#"><i
-                        class="fas fa-shopping-cart"></i></a><a class="active" href="detail.html"><i
-                        class="fas fa-search"></i> View</a><a href="#" data-toggle="modal"
-                      data-bs-target="#productView"><i class="fas fa-expand"></i></a></div>
+                  <div class="CTA d-flex align-items-center justify-content-center">
+                    <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="fas fa-shopping-cart"></i></a>
+                    <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="far fa-heart"></i></a>
+                  </div>
                 </div>
               </div>
               <div class="pt-3"><a class="reset-anchor" href="detail.html">
-                  <h3 class="h6 text-uppercase mb-0">Elegant Gray</h3>
-                </a><span class="price text-muted">$40.00</span></div>
+                  <h3 class="h6 mb-0 text-uppercase">Elegant Lake</h3>
+                </a><span class="text-muted">$40.00</span></div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="product mb-5">
               <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
-                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-woman-2.1ed521e4.jpg" alt="product">
+                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-2.2e56091b.jpg" alt="product">
                 <div class="hover-overlay d-flex align-items-center justify-content-center">
-                  <div class="CTA d-flex align-items-center justify-content-center"><a href="#"><i
-                        class="fas fa-shopping-cart"></i></a><a class="active" href="detail.html"><i
-                        class="fas fa-search"></i> View</a><a href="#" data-toggle="modal"
-                      data-bs-target="#productView"><i class="fas fa-expand"></i></a></div>
+                  <div class="CTA d-flex align-items-center justify-content-center">
+                    <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="fas fa-shopping-cart"></i></a>
+                    <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+                    <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="far fa-heart"></i></a>
+                  </div>
                 </div>
               </div>
               <div class="pt-3"><a class="reset-anchor" href="detail.html">
-                  <h3 class="h6 text-uppercase mb-0">Elegant Black</h3>
-                </a><span class="price text-muted">$40.00</span></div>
+                  <h3 class="h6 mb-0 text-uppercase">Elegant Blue</h3>
+                </a><span class="text-muted">$40.00</span></div>
             </div>
           </div>
         </div>
@@ -555,6 +652,7 @@
       </div>
     </div>
   </section>
+
   <!-- Blog Section-->
   <section class="py-5 bg-light">
     <div class="container py-5">
@@ -575,7 +673,8 @@
                 <h4 class="h5 mb-1"><a class="reset-anchor" href="post.html">Newest photo apps </a></h4>
                 <p class="small text-gray-6 mb-4"><i class="fas fa-clock me-1"></i>May 10th 2016</p>
                 <p class="text-muted fw-normal">ellentesque habitant morbi tristique senectus et netus et malesuada
-                  fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+                  fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet,
+                  ante.
                   Aenean ultricies mi vitae est. </p><a class="read-more" href="post.html">Read More<i
                     class="fas fa-long-arrow-alt-right"></i></a>
               </div>
@@ -594,7 +693,8 @@
               <div class="py-5 px-4 bg-white h-100">
                 <h4 class="h5 mb-1"><a class="reset-anchor" href="post.html">Best books about Photography </a></h4>
                 <p class="small text-gray-6 mb-4"><i class="fas fa-clock me-1"></i>May 10th 2016</p>
-                <p class="text-muted fw-normal">Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet,
+                <p class="text-muted fw-normal">Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit
+                  amet,
                   ante. Mauris placerat eleifend leo.</p><a class="read-more" href="post.html">Read More<i
                     class="fas fa-long-arrow-alt-right"></i></a>
               </div>
@@ -819,7 +919,8 @@
           </div>
           <div class="newsletter col-lg-4">
             <h5 class="text-white text-uppercase mb-4">Daily Offers &amp; Discounts</h5>
-            <p class="text-sm fw-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.
+            <p class="text-sm fw-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque
+              temporibus.
             </p>
             <form action="#" id="newsletter-form">
               <div class="input-group mb-3 border">
@@ -839,18 +940,21 @@
         <div class="row align-items-center gy-3">
           <div class="col-md-6">
             <p class="mb-0 text-sm fw-normal">&copy; 2023 <a class="reset-anchor"
-                href="https://github.com/Kashea/APIDRIVEN_ECOMMERCE_WEBSITE" target="_blank">Clothes Studio</a> All
+                href="https://github.com/Kashea/APIDRIVEN_ECOMMERCE_WEBSITE" target="_blank">Clothes Studio</a>
+              All
               rights reserved.</p>
           </div>
           <div class="col-md-6">
             <ul class="list-inline text-lg-end mb-0">
               <li class="list-inline-item"><img
-                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/visa.5210170f.svg" alt="..." width="30"></li>
+                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/visa.5210170f.svg" alt="..." width="30">
+              </li>
               <li class="list-inline-item"><img
                   src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/mastercard.ea104053.svg" alt="..." width="30">
               </li>
               <li class="list-inline-item"><img
-                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/paypal.abed015f.svg" alt="..." width="30"></li>
+                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/paypal.abed015f.svg" alt="..." width="30">
+              </li>
               <li class="list-inline-item"><img
                   src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/western-union.5550a98f.svg" alt="..."
                   width="30"></li>
@@ -878,7 +982,8 @@
     </form>
     <p><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/template-mac.e1286699.png" alt="">
     </p>
-    <p class="text-muted text-small">Stylesheet switching is done via JavaScript and can cause a blink while page loads.
+    <p class="text-muted text-small">Stylesheet switching is done via JavaScript and can cause a blink while page
+      loads.
       This will not happen in your production code.</p>
   </div>
   <!-- JavaScript files-->
@@ -963,11 +1068,126 @@
   <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-</body>
 
-</html>
 
-<body>
+  <script>
+    $(document).ready(function () {
+      // Handle add to cart button click
+      $('.add-to-cart').on('click', function (e) {
+        e.preventDefault();
+        addToCart(
+          $(this).data('id'),
+          $(this).data('name'),
+          $(this).data('price'),
+          $(this).data('img')
+        );
+      });
+
+      // Handle add to wishlist button click
+      $('.add-to-wishlist').on('click', function (e) {
+        e.preventDefault();
+        addToWishlist(
+          $(this).data('id'),
+          $(this).data('name'),
+          $(this).data('price'),
+          $(this).data('img')
+        );
+      });
+
+      // Function to add a product to the cart
+      function addToCart(id, name, price, img) {
+        // Add the product to the cart
+        // Update the cart details in the navbar dropdown
+        // ...
+      }
+
+      // Function to add a product to the wishlist
+      function addToWishlist(id, name, price, img) {
+        // Add the product to the wishlist
+        // Update the wishlist details in the navbar dropdown
+        // ...
+      }
+    });
+
+
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    // Generate products function
+    function generateProducts() {
+      const products = [];
+      const colors = ['red', 'green', 'blue', 'yellow', 'orange', 'purple', 'black', 'white'];
+
+      for (let i = 1; i <= 72; i++) {
+        products.push({
+          id: i,
+          name: `Product ${i}`,
+          price: (Math.random() * 100).toFixed(2),
+          color: colors[Math.floor(Math.random() * colors.length)],
+          image: `https://via.placeholder.com/150/${Math.floor(Math.random() * 16777215).toString(16)}/FFFFFF/?text=Product${i}`,
+          quantity: 1
+        });
+      }
+
+      return products;
+    }
+
+    // Fetch cart items function
+    async function fetchCartItems() {
+      const products = generateProducts();
+      return products.slice(0, 5); // Return the first 5 products as an example
+    }
+
+    // Update Swiper items function
+    function updateSwiperItems(products) {
+      const swiperContainer = document.getElementById('swiperContainer');
+
+      products.forEach((product) => {
+        const swiperSlide = document.createElement('div');
+        swiperSlide.classList.add('swiper-slide');
+        swiperSlide.innerHTML = `
+          <div class="product mb-5">
+            <div class="image bg-light d-flex align-items-center justify-content-center">
+              <img class="img-fluid" src="${product.image}" alt="product">
+              <div class="hover-overlay d-flex align-items-center justify-content-center">
+                <div class="CTA d-flex align-items-center justify-content-center">
+                  <a href="#" class="addToCartBtn" data-product-id="${product.id}"><i class="fas fa-shopping-cart"></i></a>
+                  <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="pt-3">
+              <a class="reset-anchor" href="detail.html">
+                <h3 class="h6 mb-0 text-uppercase">${product.name}</h3>
+              </a>
+              <span class="text-muted">$${product.price}</span>
+            </div>
+          </div>
+        `;
+
+        swiperContainer.appendChild(swiperSlide);
+      });
+    }
+
+    // Fetch products and update Swiper items
+    fetchCartItems().then((products) => {
+      updateSwiperItems(products);
+    });
+
+    // Add event listener for "add to cart" buttons
+    document.addEventListener('click', (event) => {
+      if (event.target.matches('.addToCartBtn')) {
+        const productId = event.target.dataset.productId;
+        addToCart(productId);
+      }
+    });
+
+    // Add your existing addToCart function and other related functions here
+  </script>
+
+
 
 </body>
 
