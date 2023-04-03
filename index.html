@@ -37,40 +37,7 @@
   <!-- Google fonts-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700&amp;display=swap">
 
-  <style>
-    .nav-link .svg-icon {
-      width: 24px;
-      height: 24px;
-    }
-
-    .cart-no,
-    .wishlist-no {
-      position: absolute;
-      top: -6px;
-      right: -8px;
-      font-size: 0.75rem;
-      background-color: red;
-      color: white;
-      padding: 2px 4px;
-      border-radius: 50%;
-    }
-
-    .dropdown-item .product-icons {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .btn-indigo-transparent {
-      background-color: rgba(75, 0, 130, 0.1);
-      color: #4b0082;
-    }
-
-    .btn-indigo-transparent:hover {
-      background-color: rgba(75, 0, 130, 0.25);
-      color: #4b0082;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
 
 
 </head>
@@ -179,44 +146,22 @@
 
 
           <!-- Replace this part of your existing navbar -->
-          <li class="nav-item dropdown mx-2 mx-lg-0 px-3 px-lg-0 d-none d-lg-block">
-            <a class="nav-link position-relative dropdown-toggle no-caret" id="cartDropdown" href="#"
-              data-bs-toggle="dropdown" aria-expanded="false">
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="cart-icon" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="fas fa-shopping-cart"></i>
-              <span class="cart-no">1</span>
+              <span class="badge rounded-pill bg-danger" id="cart-count">0</span>
             </a>
-            <div class="dropdown-menu dropdown-menu-end mt-lg-4 p-4" aria-labelledby="cartDropdown">
-              <div class="dropdown-item no-hover d-flex justify-content-between px-0 pb-3">
-                <div class="d-flex me-2">
-                  <a class="d-block bg-light p-2" href="detail.html"><img
-                      src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg" alt=""
-                      width="60"></a>
-                  <div class="ms-2">
-                    <h5 class="mb-1"><a class="reset-anchor" href="detail.html">Heather Gray Hoodie</a></h5>
-                    <p class="small text-gray-6 mb-1">Size: M</p>
-                    <div class="d-flex align-items-center">
-                      <input type="number" class="form-control form-control-sm me-2" min="1" value="1"
-                        style="width: 60px;">
-                      <h6 class="mb-0">$75.00</h6>
-                    </div>
-                  </div>
-                </div>
-                <a class="reset-anchor ms-4" href="#"><i class="far fa-trash-alt"></i></a>
-              </div>
-              <div class="dropdown-item no-hover border-top border-bottom border-gray-3 px-0 py-2">
-                <div class="d-flex justify-content-between align-items-center">
-                  <p class="text-gray-6 mb-0">Total</p>
-                  <p class="fw-bold text-primary mb-0">$75.00</p>
-                </div>
-              </div>
-              <div class="dropdown-item no-hover px-0 pt-3">
-                <div class="row gx-2">
-                  <div class="col-lg-6"><a class="btn btn-primary w-100" href="cart.html">View cart</a></div>
-                  <div class="col-lg-6"><a class="btn btn-primary w-100" href="checkout1.html">Checkout</a></div>
-                </div>
-              </div>
-            </div>
+            <div class="dropdown-menu" id="cart-dropdown"></div>
           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="wishlist-icon" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-heart"></i>
+              <span class="badge rounded-pill bg-danger" id="wishlist-count">0</span>
+            </a>
+            <div class="dropdown-menu" id="wishlist-dropdown"></div>
+          </li>
+
 
 
         </ul>
@@ -355,15 +300,39 @@
                   src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg" alt="product">
                 <div class="hover-overlay d-flex align-items-center justify-content-center">
                   <div class="CTA d-flex align-items-center justify-content-center">
-                    <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                    <!-- <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
                       data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
-                        class="fas fa-shopping-cart"></i></a>
-                    <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
-                    <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                        class="fas fa-shopping-cart"></i></a> -->
+                    <!-- <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a> -->
+                    <li class="list-inline-item">
+                      <button class="btn btn-primary" onclick="addToCart(1, 'Lose Oversized Shirt', 65)"
+                        title="Add to cart">
+                        <i class="fas fa-shopping-cart"></i>
+                      </button>
+                    </li>
+
+                    <li class="list-inline-item">
+
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+
+                    </li <li class="list-inline-item">
+                    <button class="btn btn-outline-secondary" onclick="addToWishlist(1, 'Lose Oversized Shirt', 65)"
+                      title="Add to wishlist">
+                      <i class="far fa-heart"></i>
+                    </button>
+                    </li>
+
+
+                    <!-- <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
                       data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
-                        class="far fa-heart"></i></a>
+                        class="far fa-heart"></i></a> -->
+
+
+
+
+
                   </div>
+
                 </div>
               </div>
               <div class="pt-3"><a class="reset-anchor" href="detail.html">
@@ -824,10 +793,18 @@
                   </li>
                 </ul>
                 <ul class="list-inline">
-                  <li class="list-inline-item"><a class="btn btn-primary px-5" href="#"> <i
-                        class="fas fa-shopping-cart me-2"></i>Add to cart</a></li>
-                  <li class="list-inline-item"><a class="btn btn-outline-secondary px-5" href="#"> <i
-                        class="far fa-heart me-2"></i>Add to wishlist</a></li>
+                  <li class="list-inline-item">
+                    <button class="btn btn-primary" onclick="addToCart(1, 'Lose Oversized Shirt', 65)"
+                      title="Add to cart">
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </li>
+                  <li class="list-inline-item">
+                    <button class="btn btn-outline-secondary" onclick="addToWishlist(1, 'Lose Oversized Shirt', 65)"
+                      title="Add to wishlist">
+                      <i class="far fa-heart"></i>
+                    </button>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -1114,77 +1091,109 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <script>
-    // Generate products function
-    function generateProducts() {
-      const products = [];
-      const colors = ['red', 'green', 'blue', 'yellow', 'orange', 'purple', 'black', 'white'];
-
-      for (let i = 1; i <= 72; i++) {
-        products.push({
-          id: i,
-          name: `Product ${i}`,
-          price: (Math.random() * 100).toFixed(2),
-          color: colors[Math.floor(Math.random() * colors.length)],
-          image: `https://via.placeholder.com/150/${Math.floor(Math.random() * 16777215).toString(16)}/FFFFFF/?text=Product${i}`,
-          quantity: 1
-        });
+    class CartItem {
+      constructor(id, title, price) {
+        this.id = id;
+        this.title = title;
+        this.price = price;
+        this.quantity = 1;
       }
-
-      return products;
     }
 
-    // Fetch cart items function
-    async function fetchCartItems() {
-      const products = generateProducts();
-      return products.slice(0, 5); // Return the first 5 products as an example
+    let cart = [];
+    let wishlist = [];
+
+    function addToCart(id, title, price) {
+      const existingItem = cart.find(item => item.id === id);
+      if (existingItem) {
+        existingItem.quantity++;
+      } else {
+        const newItem = new CartItem(id, title, price);
+        cart.push(newItem);
+      }
+      updateCartDropdown();
     }
 
-    // Update Swiper items function
-    function updateSwiperItems(products) {
-      const swiperContainer = document.getElementById('swiperContainer');
+    function addToWishlist(id, title, price) {
+      const existingItem = wishlist.find(item => item.id === id);
+      if (!existingItem) {
+        const newItem = new CartItem(id, title, price);
+        wishlist.push(newItem);
+      }
+      updateWishlistDropdown();
+    }
 
-      products.forEach((product) => {
-        const swiperSlide = document.createElement('div');
-        swiperSlide.classList.add('swiper-slide');
-        swiperSlide.innerHTML = `
-          <div class="product mb-5">
-            <div class="image bg-light d-flex align-items-center justify-content-center">
-              <img class="img-fluid" src="${product.image}" alt="product">
-              <div class="hover-overlay d-flex align-items-center justify-content-center">
-                <div class="CTA d-flex align-items-center justify-content-center">
-                  <a href="#" class="addToCartBtn" data-product-id="${product.id}"><i class="fas fa-shopping-cart"></i></a>
-                  <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="pt-3">
-              <a class="reset-anchor" href="detail.html">
-                <h3 class="h6 mb-0 text-uppercase">${product.name}</h3>
-              </a>
-              <span class="text-muted">$${product.price}</span>
-            </div>
-          </div>
-        `;
+    function updateCartDropdown() {
+      let cartDropdownContent = '';
+      let totalQuantity = 0;
+      let totalPrice = 0;
 
-        swiperContainer.appendChild(swiperSlide);
+      cart.forEach(item => {
+        cartDropdownContent += `
+      <div class="dropdown-item">
+        <img src="https://via.placeholder.com/50" alt="Product Image">
+        <span>${item.title}</span>
+        <span>${item.quantity} x $${item.price}</span>
+        <button class="btn btn-sm btn-danger" onclick="removeFromCart(${item.id})">Remove</button>
+      </div>
+    `;
+        totalQuantity += item.quantity;
+        totalPrice += item.quantity * item.price;
       });
+
+      cartDropdownContent += `
+    <div class="dropdown-item">
+      <strong>Total: $${totalPrice.toFixed(2)}</strong>
+    </div>
+    <div class="dropdown-item">
+      <button class="btn btn-primary" onclick="proceedToCheckout()">Proceed to checkout</button>
+    </div>
+  `;
+
+      document.querySelector('#cart-dropdown').innerHTML = cartDropdownContent;
+      document.querySelector('#cart-count').textContent = totalQuantity;
     }
 
-    // Fetch products and update Swiper items
-    fetchCartItems().then((products) => {
-      updateSwiperItems(products);
-    });
+    function updateWishlistDropdown() {
+      let wishlistDropdownContent = '';
+      let totalWishlistItems = 0;
 
-    // Add event listener for "add to cart" buttons
-    document.addEventListener('click', (event) => {
-      if (event.target.matches('.addToCartBtn')) {
-        const productId = event.target.dataset.productId;
-        addToCart(productId);
+      wishlist.forEach(item => {
+        wishlistDropdownContent += `
+      <div class="dropdown-item">
+        <img src="https://via.placeholder.com/50" alt="Product Image">
+        <span>${item.title}</span>
+        <button class="btn btn-sm btn-danger" onclick="removeFromWishlist(${item.id})">Remove</button>
+      </div>
+    `;
+        totalWishlistItems++;
+      });
+
+      document.querySelector('#wishlist-dropdown').innerHTML = wishlistDropdownContent;
+      document.querySelector('#wishlist-count').textContent = totalWishlistItems;
+    }
+
+    function removeFromCart(id) {
+      const itemIndex = cart.findIndex(item => item.id === id);
+      if (itemIndex !== -1) {
+        cart.splice(itemIndex, 1);
+        updateCartDropdown();
       }
-    });
+    }
 
-    // Add your existing addToCart function and other related functions here
+    function removeFromWishlist(id) {
+      const itemIndex = wishlist.findIndex(item => item.id === id);
+      if (itemIndex !== -1) {
+        wishlist.splice(itemIndex, 1);
+        updateWishlistDropdown();
+      }
+    }
+
+    function proceedToCheckout() {
+      alert('Proceeding to the checkout page...');
+    }
+
+
   </script>
 
 
