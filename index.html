@@ -36,6 +36,7 @@
   <link rel="shortcut icon" href="assets/images/favicon/ms-icon-150x150-removebg-preview.png">
   <!-- Google fonts-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700&amp;display=swap">
+  
 
   <link rel="stylesheet" href="assets/css/style.css">
 
@@ -51,7 +52,7 @@
           <div class="col-lg-6 d-none d-lg-block">
             <ul class="list-inline mb-0 small list-separated-light">
               <li class="list-inline-item me-3">
-                <a href="tel:1-800-123-4567""><svg class=" svg-icon svg-icon-sm me-1"></svg>1-800-123-4567</a>
+                <a href="tel:1-800-123-4567"><svg class=" svg-icon svg-icon-sm me-1"></svg>1-800-123-4567</a>
               </li>
               <li class="list-inline-item ps-3">Free shipping on orders over ₱10,000</li>
             </ul>
@@ -147,20 +148,20 @@
 
           <!-- Replace this part of your existing navbar -->
           <li class="nav-item dropdown">
-            <a class="nav-link" href="#" id="cart-icon" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link position-relative dropdown-toggle no-caret" id="cartDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="fas fa-shopping-cart"></i>
-              <span class="badge rounded-pill bg-danger" id="cart-count">0</span>
+              <span class="badge rounded-pill bg-danger" id="cart-count" >0</span>
             </a>
-            <div class="dropdown-menu" id="cart-dropdown"></div>
+            <div class="dropdown-menu dropdown-menu-end mt-lg-4 p-4" id="cart-dropdown"></div>
           </li>
 
           <li class="nav-item dropdown">
-            <a class="nav-link" href="#" id="wishlist-icon" role="button" data-bs-toggle="dropdown"
+            <a class="nav-link" href="#" id="wishlist-icon" role="button" data-bs-toggle="dropdown" 
               aria-expanded="false">
               <i class="fas fa-heart"></i>
               <span class="badge rounded-pill bg-danger" id="wishlist-count">0</span>
             </a>
-            <div class="dropdown-menu" id="wishlist-dropdown"></div>
+            <div class="dropdown-menu dropdown-menu-end mt-lg-4 p-4" id="wishlist-dropdown"></div>
           </li>
 
 
@@ -293,6 +294,7 @@
       <div class="swiper-wrapper" id="swiperContainer"></div>
       <div class="swiper-container products-slider">
         <div class="swiper-wrapper">
+
           <!-- item-->
           <div class="swiper-slide">
             <div class="product mb-5">
@@ -300,10 +302,12 @@
                   src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg" alt="product">
                 <div class="hover-overlay d-flex align-items-center justify-content-center">
                   <div class="CTA d-flex align-items-center justify-content-center">
+
                     <!-- <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
                       data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
                         class="fas fa-shopping-cart"></i></a> -->
                     <!-- <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a> -->
+
                     <li class="list-inline-item">
                       <button class="btn btn-primary" onclick="addToCart(1, 'Lose Oversized Shirt', 40)"
                         title="Add to cart">
@@ -315,22 +319,12 @@
 
                       <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
 
-                    </li <li class="list-inline-item">
-                    <button class="btn btn-outline-secondary" onclick="addToWishlist(1, 'Lose Oversized Shirt', 40)"
-                      title="Add to wishlist">
-                      <i class="far fa-heart"></i>
-                    </button>
+                    <li class="list-inline-item">
+                      <button class="btn btn-outline-secondary" onclick="addToWishlist(1, 'Lose Oversized Shirt', 40)"
+                        title="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                      </button>
                     </li>
-
-
-                    <!-- <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
-                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
-                        class="far fa-heart"></i></a> -->
-
-
-
-
-
                   </div>
 
                 </div>
@@ -340,97 +334,42 @@
                 </a><span class="text-muted">$40.00</span></div>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="product mb-5">
-              <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
-                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-2.2e56091b.jpg" alt="product">
-                <div class="hover-overlay d-flex align-items-center justify-content-center">
-                  <div class="CTA d-flex align-items-center justify-content-center">
-                    <li class="list-inline-item">
-                      <button class="btn btn-primary" onclick="addToCart(1, 'Lose Oversized Shirt', 40)"
-                        title="Add to cart">
-                        <i class="fas fa-shopping-cart"></i>
-                      </button>
-                    </li>
 
-                    <li class="list-inline-item">
 
-                      <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
 
-                    </li <li class="list-inline-item">
-                    <button class="btn btn-outline-secondary" onclick="addToWishlist(1, 'Lose Oversized Shirt', 40)"
-                      title="Add to wishlist">
-                      <i class="far fa-heart"></i>
-                    </button>
-                    </li>
 
-                  </div>
-                </div>
-              </div>
-              <div class="pt-3"><a class="reset-anchor" href="detail.html">
-                  <h3 class="h6 mb-0 text-uppercase">Elegant Blue</h3>
-                </a><span class="text-muted">$40.00</span></div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product mb-5">
-              <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
-                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-3.7f2b589d.jpg" alt="product">
-                <div class="hover-overlay d-flex align-items-center justify-content-center">
-                  <div class="CTA d-flex align-items-center justify-content-center">
-                    <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
-                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
-                        class="fas fa-shopping-cart"></i></a>
-                    <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
-                    <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
-                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
-                        class="far fa-heart"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="pt-3"><a class="reset-anchor" href="detail.html">
-                  <h3 class="h6 mb-0 text-uppercase">Elegant Black</h3>
-                </a><span class="text-muted">$40.00</span></div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product mb-5">
-              <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
-                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-4.702b9b2c.jpg" alt="product">
-                <div class="hover-overlay d-flex align-items-center justify-content-center">
-                  <div class="CTA d-flex align-items-center justify-content-center">
-                    <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
-                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
-                        class="fas fa-shopping-cart"></i></a>
-                    <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
-                    <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
-                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
-                        class="far fa-heart"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="pt-3"><a class="reset-anchor" href="detail.html">
-                  <h3 class="h6 mb-0 text-uppercase">Elegant Gray</h3>
-                </a><span class="text-muted">$40.00</span></div>
-            </div>
-          </div>
+          <!-- item-->
           <div class="swiper-slide">
             <div class="product mb-5">
               <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
                   src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg" alt="product">
                 <div class="hover-overlay d-flex align-items-center justify-content-center">
                   <div class="CTA d-flex align-items-center justify-content-center">
-                    <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
+
+                    <!-- <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
                       data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
-                        class="fas fa-shopping-cart"></i></a>
-                    <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
-                    <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
-                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
-                        class="far fa-heart"></i></a>
+                        class="fas fa-shopping-cart"></i></a> -->
+                    <!-- <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a> -->
+
+                    <li class="list-inline-item">
+                      <button class="btn btn-primary" onclick="addToCart(1, 'Lose Oversized Shirt', 40)"
+                        title="Add to cart">
+                        <i class="fas fa-shopping-cart"></i>
+                      </button>
+                    </li>
+
+                    <li class="list-inline-item">
+
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+
+                    <li class="list-inline-item">
+                      <button class="btn btn-outline-secondary" onclick="addToWishlist(1, 'Lose Oversized Shirt', 40)"
+                        title="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                      </button>
+                    </li>
                   </div>
+
                 </div>
               </div>
               <div class="pt-3"><a class="reset-anchor" href="detail.html">
@@ -438,6 +377,134 @@
                 </a><span class="text-muted">$40.00</span></div>
             </div>
           </div>
+
+
+
+           <!-- item-->
+          <div class="swiper-slide">
+            <div class="product mb-5">
+              <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
+                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg" alt="product">
+                <div class="hover-overlay d-flex align-items-center justify-content-center">
+                  <div class="CTA d-flex align-items-center justify-content-center">
+
+                    <!-- <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="fas fa-shopping-cart"></i></a> -->
+                    <!-- <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a> -->
+
+                    <li class="list-inline-item">
+                      <button class="btn btn-primary" onclick="addToCart(1, 'Lose Oversized Shirt', 40)"
+                        title="Add to cart">
+                        <i class="fas fa-shopping-cart"></i>
+                      </button>
+                    </li>
+
+                    <li class="list-inline-item">
+
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+
+                    <li class="list-inline-item">
+                      <button class="btn btn-outline-secondary" onclick="addToWishlist(1, 'Lose Oversized Shirt', 40)"
+                        title="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                      </button>
+                    </li>
+                  </div>
+
+                </div>
+              </div>
+              <div class="pt-3"><a class="reset-anchor" href="detail.html">
+                  <h3 class="h6 mb-0 text-uppercase">Elegant Lake</h3>
+                </a><span class="text-muted">$40.00</span></div>
+            </div>
+          </div>
+
+
+           <!-- item-->
+          <div class="swiper-slide">
+            <div class="product mb-5">
+              <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
+                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg" alt="product">
+                <div class="hover-overlay d-flex align-items-center justify-content-center">
+                  <div class="CTA d-flex align-items-center justify-content-center">
+
+                    <!-- <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="fas fa-shopping-cart"></i></a> -->
+                    <!-- <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a> -->
+
+                    <li class="list-inline-item">
+                      <button class="btn btn-primary" onclick="addToCart(1, 'Lose Oversized Shirt', 40)"
+                        title="Add to cart">
+                        <i class="fas fa-shopping-cart"></i>
+                      </button>
+                    </li>
+
+                    <li class="list-inline-item">
+
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+
+                    <li class="list-inline-item">
+                      <button class="btn btn-outline-secondary" onclick="addToWishlist(1, 'Lose Oversized Shirt', 40)"
+                        title="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                      </button>
+                    </li>
+                  </div>
+
+                </div>
+              </div>
+              <div class="pt-3"><a class="reset-anchor" href="detail.html">
+                  <h3 class="h6 mb-0 text-uppercase">Elegant Lake</h3>
+                </a><span class="text-muted">$40.00</span></div>
+            </div>
+          </div>
+
+
+
+          <!-- item-->
+          <div class="swiper-slide">
+            <div class="product mb-5">
+              <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
+                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg" alt="product">
+                <div class="hover-overlay d-flex align-items-center justify-content-center">
+                  <div class="CTA d-flex align-items-center justify-content-center">
+
+                    <!-- <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="fas fa-shopping-cart"></i></a> -->
+                    <!-- <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a> -->
+
+                    <li class="list-inline-item">
+                      <button class="btn btn-primary" onclick="addToCart(1, 'Lose Oversized Shirt', 40)"
+                        title="Add to cart">
+                        <i class="fas fa-shopping-cart"></i>
+                      </button>
+                    </li>
+
+                    <li class="list-inline-item">
+
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+
+                    <li class="list-inline-item">
+                      <button class="btn btn-outline-secondary" onclick="addToWishlist(1, 'Lose Oversized Shirt', 40)"
+                        title="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                      </button>
+                    </li>
+                  </div>
+
+                </div>
+              </div>
+              <div class="pt-3"><a class="reset-anchor" href="detail.html">
+                  <h3 class="h6 mb-0 text-uppercase">Elegant Lake</h3>
+                </a><span class="text-muted">$40.00</span></div>
+            </div>
+          </div>
+
+
+
           <div class="swiper-slide">
             <div class="product mb-5">
               <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
@@ -490,9 +557,92 @@
         <p class="lead text-uppercase text-muted mb-0">Autumn Choice</p>
         <h2 class="text-uppercase">Women's Collection</h2>
       </header>
+
       <!-- Products Slider-->
       <div class="swiper-container products-slider">
         <div class="swiper-wrapper">
+           <!-- item-->
+          <div class="swiper-slide">
+            <div class="product mb-5">
+              <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
+                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg" alt="product">
+                <div class="hover-overlay d-flex align-items-center justify-content-center">
+                  <div class="CTA d-flex align-items-center justify-content-center">
+
+                    <!-- <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="fas fa-shopping-cart"></i></a> -->
+                    <!-- <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a> -->
+
+                    <li class="list-inline-item">
+                      <button class="btn btn-primary" onclick="addToCart(1, 'Lose Oversized Shirt', 40)"
+                        title="Add to cart">
+                        <i class="fas fa-shopping-cart"></i>
+                      </button>
+                    </li>
+
+                    <li class="list-inline-item">
+
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+
+                    <li class="list-inline-item">
+                      <button class="btn btn-outline-secondary" onclick="addToWishlist(1, 'Lose Oversized Shirt', 40)"
+                        title="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                      </button>
+                    </li>
+                  </div>
+
+                </div>
+              </div>
+              <div class="pt-3"><a class="reset-anchor" href="detail.html">
+                  <h3 class="h6 mb-0 text-uppercase">Elegant Lake</h3>
+                </a><span class="text-muted">$40.00</span></div>
+            </div>
+          </div>
+
+
+           <!-- item-->
+          <div class="swiper-slide">
+            <div class="product mb-5">
+              <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
+                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg" alt="product">
+                <div class="hover-overlay d-flex align-items-center justify-content-center">
+                  <div class="CTA d-flex align-items-center justify-content-center">
+
+                    <!-- <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="fas fa-shopping-cart"></i></a> -->
+                    <!-- <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a> -->
+
+                    <li class="list-inline-item">
+                      <button class="btn btn-primary" onclick="addToCart(1, 'Lose Oversized Shirt', 40)"
+                        title="Add to cart">
+                        <i class="fas fa-shopping-cart"></i>
+                      </button>
+                    </li>
+
+                    <li class="list-inline-item">
+
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+
+                    <li class="list-inline-item">
+                      <button class="btn btn-outline-secondary" onclick="addToWishlist(1, 'Lose Oversized Shirt', 40)"
+                        title="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                      </button>
+                    </li>
+                  </div>
+
+                </div>
+              </div>
+              <div class="pt-3"><a class="reset-anchor" href="detail.html">
+                  <h3 class="h6 mb-0 text-uppercase">Elegant Lake</h3>
+                </a><span class="text-muted">$40.00</span></div>
+            </div>
+          </div>
+
+
           <!-- item-->
           <div class="swiper-slide">
             <div class="product mb-5">
@@ -500,15 +650,31 @@
                   src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg" alt="product">
                 <div class="hover-overlay d-flex align-items-center justify-content-center">
                   <div class="CTA d-flex align-items-center justify-content-center">
-                    <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
+
+                    <!-- <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
                       data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
-                        class="fas fa-shopping-cart"></i></a>
-                    <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
-                    <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
-                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
-                        class="far fa-heart"></i></a>
+                        class="fas fa-shopping-cart"></i></a> -->
+                    <!-- <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a> -->
+
+                    <li class="list-inline-item">
+                      <button class="btn btn-primary" onclick="addToCart(1, 'Lose Oversized Shirt', 40)"
+                        title="Add to cart">
+                        <i class="fas fa-shopping-cart"></i>
+                      </button>
+                    </li>
+
+                    <li class="list-inline-item">
+
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+
+                    <li class="list-inline-item">
+                      <button class="btn btn-outline-secondary" onclick="addToWishlist(1, 'Lose Oversized Shirt', 40)"
+                        title="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                      </button>
+                    </li>
                   </div>
+
                 </div>
               </div>
               <div class="pt-3"><a class="reset-anchor" href="detail.html">
@@ -516,87 +682,40 @@
                 </a><span class="text-muted">$40.00</span></div>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="product mb-5">
-              <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
-                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-2.2e56091b.jpg" alt="product">
-                <div class="hover-overlay d-flex align-items-center justify-content-center">
-                  <div class="CTA d-flex align-items-center justify-content-center">
-                    <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
-                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
-                        class="fas fa-shopping-cart"></i></a>
-                    <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
-                    <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
-                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
-                        class="far fa-heart"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="pt-3"><a class="reset-anchor" href="detail.html">
-                  <h3 class="h6 mb-0 text-uppercase">Elegant Blue</h3>
-                </a><span class="text-muted">$40.00</span></div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product mb-5">
-              <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
-                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-3.7f2b589d.jpg" alt="product">
-                <div class="hover-overlay d-flex align-items-center justify-content-center">
-                  <div class="CTA d-flex align-items-center justify-content-center">
-                    <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
-                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
-                        class="fas fa-shopping-cart"></i></a>
-                    <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
-                    <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
-                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
-                        class="far fa-heart"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="pt-3"><a class="reset-anchor" href="detail.html">
-                  <h3 class="h6 mb-0 text-uppercase">Elegant Black</h3>
-                </a><span class="text-muted">$40.00</span></div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product mb-5">
-              <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
-                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-4.702b9b2c.jpg" alt="product">
-                <div class="hover-overlay d-flex align-items-center justify-content-center">
-                  <div class="CTA d-flex align-items-center justify-content-center">
-                    <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
-                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
-                        class="fas fa-shopping-cart"></i></a>
-                    <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
-                    <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
-                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
-                        class="far fa-heart"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="pt-3"><a class="reset-anchor" href="detail.html">
-                  <h3 class="h6 mb-0 text-uppercase">Elegant Gray</h3>
-                </a><span class="text-muted">$40.00</span></div>
-            </div>
-          </div>
+
+
+           <!-- item-->
           <div class="swiper-slide">
             <div class="product mb-5">
               <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
                   src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg" alt="product">
                 <div class="hover-overlay d-flex align-items-center justify-content-center">
                   <div class="CTA d-flex align-items-center justify-content-center">
-                    <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
+
+                    <!-- <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
                       data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
-                        class="fas fa-shopping-cart"></i></a>
-                    <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
-                    <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
-                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
-                        class="far fa-heart"></i></a>
+                        class="fas fa-shopping-cart"></i></a> -->
+                    <!-- <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a> -->
+
+                    <li class="list-inline-item">
+                      <button class="btn btn-primary" onclick="addToCart(1, 'Lose Oversized Shirt', 40)"
+                        title="Add to cart">
+                        <i class="fas fa-shopping-cart"></i>
+                      </button>
+                    </li>
+
+                    <li class="list-inline-item">
+
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+
+                    <li class="list-inline-item">
+                      <button class="btn btn-outline-secondary" onclick="addToWishlist(1, 'Lose Oversized Shirt', 40)"
+                        title="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                      </button>
+                    </li>
                   </div>
+
                 </div>
               </div>
               <div class="pt-3"><a class="reset-anchor" href="detail.html">
@@ -604,6 +723,49 @@
                 </a><span class="text-muted">$40.00</span></div>
             </div>
           </div>
+
+
+           <!-- item-->
+          <div class="swiper-slide">
+            <div class="product mb-5">
+              <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
+                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg" alt="product">
+                <div class="hover-overlay d-flex align-items-center justify-content-center">
+                  <div class="CTA d-flex align-items-center justify-content-center">
+
+                    <!-- <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
+                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
+                        class="fas fa-shopping-cart"></i></a> -->
+                    <!-- <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a> -->
+
+                    <li class="list-inline-item">
+                      <button class="btn btn-primary" onclick="addToCart(1, 'Lose Oversized Shirt', 40)"
+                        title="Add to cart">
+                        <i class="fas fa-shopping-cart"></i>
+                      </button>
+                    </li>
+
+                    <li class="list-inline-item">
+
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+
+                    <li class="list-inline-item">
+                      <button class="btn btn-outline-secondary" onclick="addToWishlist(1, 'Lose Oversized Shirt', 40)"
+                        title="Add to wishlist">
+                        <i class="far fa-heart"></i>
+                      </button>
+                    </li>
+                  </div>
+
+                </div>
+              </div>
+              <div class="pt-3"><a class="reset-anchor" href="detail.html">
+                  <h3 class="h6 mb-0 text-uppercase">Elegant Lake</h3>
+                </a><span class="text-muted">$40.00</span></div>
+            </div>
+          </div>
+
+
           <div class="swiper-slide">
             <div class="product mb-5">
               <div class="image bg-light d-flex align-items-center justify-content-center"><img class="img-fluid"
@@ -969,7 +1131,7 @@
     </form>
     <p><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/template-mac.e1286699.png" alt="">
     </p>
-   
+
   </div>
   <!-- JavaScript files-->
   <script src="https://d19m59y37dris4.cloudfront.net/hub/2-0/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1108,8 +1270,6 @@
     localStorage.setItem('wishlistItems', JSON.stringify(wishlist));
 
   </script>
-
-
 
 </body>
 

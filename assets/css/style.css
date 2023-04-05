@@ -10,7 +10,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
 }
 
 .dropdown-item img {
@@ -51,5 +51,5 @@
 }
 
 .dropdown-item .buttons button {
-  margin-left: 10px;
+  margin-left: 5px;
 }
