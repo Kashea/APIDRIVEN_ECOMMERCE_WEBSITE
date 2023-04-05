@@ -1,17 +1,21 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>ShopMania</title>
+  <title>Clothes Studio</title>
   <meta name="E-Commerce Website" content="Online-Shopping">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
+
   <!-- Price Slider Stylesheets -->
   <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/hub/2-0/vendor/nouislider/nouislider.css">
   <!-- Swiper Slider Stylesheets -->
   <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/hub/2-0/vendor/swiper/swiper-bundle.css">
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <!-- Leaflet Stylesheets -->
   <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/hub/2-0/vendor/leaflet/leaflet.css">
   <!-- Parallax Stylesheets -->
@@ -30,9 +34,13 @@
   <!-- Custom stylesheet - for your changes-->
   <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/hub/2-0/css/custom.0a822280.css">
   <!-- Favicon-->
-  <link rel="shortcut icon" href="../assets/images/favicon/ms-icon-150x150-removebg-preview.png">
+  <link rel="shortcut icon" href="assets/images/favicon/ms-icon-150x150-removebg-preview.png">
   <!-- Google fonts-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700&amp;display=swap">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+
 </head>
 
 <body>
@@ -44,7 +52,7 @@
           <div class="col-lg-6 d-none d-lg-block">
             <ul class="list-inline mb-0 small list-separated-light">
               <li class="list-inline-item me-3">
-                <a href="tel:1-800-123-4567""><svg class=" svg-icon svg-icon-sm me-1"></svg>1-800-123-4567</a>
+                <a href="tel:1-800-123-4567"><svg class=" svg-icon svg-icon-sm me-1"></svg>1-800-123-4567</a>
               </li>
               <li class="list-inline-item ps-3">Free shipping on orders over ₱10,000</li>
             </ul>
@@ -69,9 +77,10 @@
       </div>
     </div>
   </header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-4 px-lg-4">
-    <div class="container-fluid"><a class="navbar-brand" href="../index.html"><img src="../assets/images/logo/logo.svg"
-          alt="website-logo" width="75"></a>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-4 px-lg-4" style="height: 100px;">
+    <div class="container-fluid"><a class="navbar-brand" href="index.html"><img src="../assets/images/logo/logo.svg"
+          alt="website-logo" width="220"></a>
       <button class="navbar-toggler rounded-0" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -80,252 +89,88 @@
           <li class="nav-item dropdown"><a class="nav-link fw-normal dropdown-toggle text-uppercase active"
               id="homepageVariants" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
             <ul class="dropdown-menu mt-lg-4" aria-labelledby="homepageVariants">
-              <li><a class="dropdown-item" href="../index.html">Classic home</a></li>
-              <li><a class="dropdown-item" href="index2.html">Parallax sections</a></li>
-              <li><a class="dropdown-item" href="index3.html">Video background</a></li>
+              <li><a class="dropdown-item" href="index.html">Landing Page</a></li>
+              <li><a class="dropdown-item" href="./pages/index2.html">Clothing Genre</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link fw-normal text-uppercase text-dark" href="category.html">Shop</a></li>
-          <!--  Megamenu-->
-          <li class="nav-item dropdown megamenu"><a class="nav-link fw-normal text-dark dropdown-toggle text-uppercase"
-              id="megamneu" href data-bs-toggle="dropdown" aria-expanded="false">Template</a>
-            <div class="dropdown-menu rounded-0 p-0 m-0 bg-white" aria-labelledby="megamneu">
-              <div class="container-fluid">
-                <div class="row p-4 p-lg-5">
-                  <div class="col-lg-9">
-                    <div class="row">
-                      <!-- Col-->
-                      <div class="col-lg-3 mb-4">
-                        <h6 class="font-weight-bold text-uppercase mb-3">Home</h6>
-                        <ul class="list-unstyled text-muted mb-4">
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal" href="index.html">Classic
-                              homepage</a></li>
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal"
-                              href="index2.html">Parallax sections<span class="badge bg-success p-1 ms-2">New</span></a>
-                          </li>
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal" href="index3.html">Video
-                              background<span class="badge bg-success p-1 ms-2">New</span></a></li>
-                        </ul>
-                        <h6 class="font-weight-bold text-uppercase mb-3">Shop</h6>
-                        <ul class="list-unstyled text-muted">
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal"
-                              href="category.html">Category - left sidebar</a></li>
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal"
-                              href="category-right.html">Category - right sidebar</a></li>
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal"
-                              href="category-full.html">Category - full width</a></li>
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal"
-                              href="category-masonry.html">Category - Masonry layout<span
-                                class="badge bg-success p-1 ms-2">New</span></a></li>
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal" href="detail.html">Product
-                              detail</a></li>
-                        </ul>
-                      </div>
-                      <!-- Col-->
-                      <div class="col-lg-3 mb-4">
-                        <h6 class="font-weight-bold text-uppercase mb-3">Order process</h6>
-                        <ul class="list-unstyled text-muted mb-4">
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal" href="cart.html">Shopping
-                              cart</a></li>
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal"
-                              href="checkout1.html">Checkout 1 - address</a></li>
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal"
-                              href="checkout2.html">Checkout 2 - Delivery</a></li>
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal"
-                              href="checkout3.html">Checkout 3 - payment</a></li>
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal"
-                              href="checkout4.html">Checkout 4 - review</a></li>
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal"
-                              href="checkout5.html">Checkout 5 - confirmation</a></li>
-                        </ul>
-                        <h6 class="font-weight-bold text-uppercase mb-3">Blog</h6>
-                        <ul class="list-unstyled text-muted">
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal" href="blog.html">Blog</a>
-                          </li>
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal" href="post.html">Post</a>
-                          </li>
-                        </ul>
-                      </div>
-                      <!-- Col            -->
-                      <div class="col-lg-3 mb-4">
-                        <h6 class="font-weight-bold text-uppercase mb-3">Pages</h6>
-                        <ul class="list-unstyled text-muted">
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal"
-                              href="contact.html">Contact</a></li>
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal" href="about.html">About
-                              us</a></li>
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal" href="text.html">Text
-                              page</a></li>
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal" href="faq.html">Faq<span
-                                class="badge bg-success p-1 ms-2">New</span></a></li>
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal"
-                              href="coming-soon.html">Coming soon<span class="badge bg-success p-1 ms-2">New</span></a>
-                          </li>
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal" href="404.html">Error
-                              404</a></li>
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal" href="500.html">Error
-                              500</a></li>
-                        </ul>
-                      </div>
-                      <!-- Col            -->
-                      <div class="col-lg-3 mb-0 mb-lg-4">
-                        <h6 class="font-weight-bold text-uppercase mb-3">Customer</h6>
-                        <ul class="list-unstyled text-muted">
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal"
-                              href="customer-login.html">Login/Sign up</a></li>
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal"
-                              href="customer-orders.html">Orders</a></li>
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal"
-                              href="customer-order.html">Order detail</a></li>
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal"
-                              href="customer-addresses.html">Addressess</a></li>
-                          <li class="nav-item"><a class="nav-link text-sm p-0 mb-2 fw-normal"
-                              href="customer-account.html">Profile</a></li>
-                        </ul>
-                      </div>
-                      <div class="col-lg-12 d-none d-lg-block">
-                        <div class="row gx-1">
-                          <div class="col-lg-3">
-                            <div class="d-flex justify-content-center justify-content-lg-start">
-                              <svg class="svg-icon text-primary svg-icon-md">
-                                <use xlink:href="#delivery-time-1"> </use>
-                              </svg>
-                              <div class="ms-3">
-                                <h6 class="text-uppercase mb-0">Free shipping &amp; return</h6>
-                                <p class="text-muted small mb-0">Free Shipping over $300</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-3">
-                            <div class="d-flex justify-content-center align-items-center">
-                              <svg class="svg-icon text-primary svg-icon-md">
-                                <use xlink:href="#dollar-sign-1"> </use>
-                              </svg>
-                              <div class="ms-3">
-                                <h6 class="text-uppercase mb-0">Money back guarantee</h6>
-                                <p class="text-muted small mb-0">30 Days Money Back</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-3">
-                            <div class="d-flex justify-content-center align-items-center">
-                              <svg class="svg-icon text-primary svg-icon-md">
-                                <use xlink:href="#helpline-24h-1"> </use>
-                              </svg>
-                              <div class="ms-3">
-                                <h6 class="text-uppercase mb-0">020-800-456-747</h6>
-                                <p class="text-muted small mb-0">24/7 Available Support</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-3">
-                            <div class="d-flex justify-content-center align-items-center">
-                              <svg class="svg-icon text-primary svg-icon-md">
-                                <use xlink:href="#shield-security-1"> </use>
-                              </svg>
-                              <div class="ms-3">
-                                <h6 class="text-uppercase mb-0">020-800-456-747</h6>
-                                <p class="text-muted small mb-0">24/7 Available Support</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Product col-->
-                  <div class="col-lg-3 text-center px-5 border-start border-light d-none d-lg-block"><a
-                      class="reset-anchor" href="detail.html"><img class="img-fluid mb-3"
-                        src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/shirt.0836aa05.jpg" alt="..."></a>
-                    <h6 class="text-uppercase"><a class="reset-anchor" href="detail.html">Lose Oversized Shirt</a></h6>
-                    <ul class="list-inline mb-2">
-                      <li class="list-inline-item m-0"><i class="far small fa-star text-primary"></i></li>
-                      <li class="list-inline-item m-0"><i class="far small fa-star text-primary"></i></li>
-                      <li class="list-inline-item m-0"><i class="far small fa-star text-primary"></i></li>
-                      <li class="list-inline-item m-0"><i class="far small fa-star text-primary"></i></li>
-                      <li class="list-inline-item m-0"><i class="far small fa-star text-primary"></i></li>
-                    </ul>
-                    <h6 class="text-sm text-primary mb-2">$65.00</h6><a class="btn btn-primary" href="#">Add to cart
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
+          <li class="nav-item"><a class="nav-link fw-normal text-uppercase text-dark" href="Shop.html">Shop</a></li>
+
+          <!-- Order Process -->
           <li class="nav-item dropdown"><a class="nav-link fw-normal text-dark dropdown-toggle text-uppercase" href="#"
-              data-bs-toggle="dropdown">Dropdown</a>
+              data-bs-toggle="dropdown">ORDER PROCESS</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li class="dropdown-submenu"><a class="dropdown-item dropdown-submenu-toggle" href="#">Layout</a>
-                <ul class="dropdown-menu dropdown-submenu">
-                  <li><a class="dropdown-item" href>Basic</a></li>
-                  <li><a class="dropdown-item" href>Compact Aside</a></li>
-                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-submenu-toggle" href="#">Custom</a>
-                    <ul class="dropdown-menu dropdown-submenu">
-                      <li><a class="dropdown-item" href>Fullscreen</a></li>
-                      <li><a class="dropdown-item" href>Empty</a></li>
-                      <li><a class="dropdown-item" href>Magic</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here </a></li>
+              <li><a class="dropdown-item" href="cart.html">Shopping Cart</a></li>
+              <li><a class="dropdown-item" href="checkout1.html">Checkout 1 - Address</a></li>
+              <li><a class="dropdown-item" href="checkout2.html">Checkout 2 - Delivery</a></li>
+              <li><a class="dropdown-item" href="checkout3.html">Checkout 3 - Payment</a></li>
+              <li><a class="dropdown-item" href="checkout4.html">Checkout 4 - Review</a></li>
+              <li><a class="dropdown-item" href="checkout5.html">Checkout 5 - Confirmation</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link fw-normal text-uppercase text-dark" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link fw-normal text-uppercase text-dark" href="contact.html">Contact</a>
+
+          <!-- Pages -->
+          <li class="nav-item dropdown"><a class="nav-link fw-normal text-dark dropdown-toggle text-uppercase" href="#"
+              data-bs-toggle="dropdown">Pages</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+              <li><a class="dropdown-item" href="about.html">About Us</a></li>
+              <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+              <li><a class="dropdown-item" href="coming-soon.html">Coming Soon</a></li>
+              <li><a class="dropdown-item" href="404.html">Error 404</a></li>
+              <li><a class="dropdown-item" href="500.html">Error 500</a></li>
+            </ul>
           </li>
+
+          <!-- Blog -->
+          <li class="nav-item dropdown"><a class="nav-link fw-normal text-dark dropdown-toggle text-uppercase" href="#"
+              data-bs-toggle="dropdown">BLOG</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Blog</a></li>
+              <li><a class="dropdown-item" href="#">Post Us</a></li>
+            </ul>
+          </li>
+
+          <!-- Customer Section -->
+          <li class="nav-item dropdown"><a class="nav-link fw-normal text-dark dropdown-toggle text-uppercase" href="#"
+              data-bs-toggle="dropdown">Customer</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="customer-login.html">Login/Sign-Up</a></li>
+              <li><a class="dropdown-item" href="customer-orders.html">Order Details</a></li>
+              <li><a class="dropdown-item" href="customer-addresses.html">Addresses</a></li>
+              <li><a class="dropdown-item" href="customer-account.html">Profile</a></li>
+            </ul>
+          </li>
+
         </ul>
         <ul class="navbar-nav flex-row mb-2 mb-lg-0 ms-lg-5 actions-nav-menu">
-          <li class="nav-item mx-2 mx-lg-0 px-lg-0"><a class="nav-link closeSearch" href="#" onclick="openSearch()">
-              <svg class="svg-icon">
-                <use xlink:href="#find-1"> </use>
-              </svg></a></li>
-          <li class="nav-item mx-2 mx-lg-0 px-lg-0"><a class="nav-link" href="customer-login.html">
-              <svg class="svg-icon">
-                <use xlink:href="#user-1"> </use>
-              </svg></a></li>
-          <li class="nav-item dropdown mx-2 mx-lg-0 px-lg-0 d-block d-lg-none"><a class="nav-link position-relative"
-              href="cart.html">
-              <svg class="svg-icon">
-                <use xlink:href="#cart-1"> </use>
-              </svg><span class="cart-no">1</span></a></li>
-          <li class="nav-item dropdown mx-2 mx-lg-0 px-3 px-lg-0 d-none d-lg-block"><a
-              class="nav-link position-relative dropdown-toggle no-caret" id="cartDropdown" href="#"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              <svg class="svg-icon">
-                <use xlink:href="#cart-1"> </use>
-              </svg><span class="cart-no">1</span></a>
-            <div class="dropdown-menu dropdown-menu-end mt-lg-4 p-4" aria-labelledby="cartDropdown">
-              <div class="dropdown-item no-hover d-flex justify-content-between px-0 pb-3">
-                <div class="d-flex me-2"><a class="d-block bg-light p-2" href="detail.html"><img
-                      src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg" alt=""
-                      width="60"></a>
-                  <div class="ms-2">
-                    <h5 class="mb-1"><a class="reset-anchor" href="detail.html">Heather Gray Hoodie</a></h5>
-                    <p class="small text-gray-6 mb-1">Quantity: 1</p>
-                    <h6 class="mb-0">$75.00 </h6>
-                  </div>
-                </div><a class="reset-anchor ms-4" href="#"><i class="far fa-trash-alt"></i></a>
-              </div>
-              <div class="dropdown-item no-hover border-top border-bottom border-gray-3 px-0 py-2">
-                <div class="d-flex justify-content-between align-items-center">
-                  <p class="text-gray-6 mb-0">Total</p>
-                  <p class="fw-bold text-primary mb-0">$75.00</p>
-                </div>
-              </div>
-              <div class="dropdown-item no-hover px-0 pt-3">
-                <div class="row gx-2">
-                  <div class="col-lg-6"><a class="btn btn-primary w-100" href="cart.html">View cart</a></div>
-                  <div class="col-lg-6"><a class="btn btn-primary w-100" href="checkout1.html">Checkout</a></div>
-                </div>
-              </div>
-            </div>
+
+
+
+          <!-- Replace this part of your existing navbar -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="cart-icon" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="badge rounded-pill bg-danger" id="cart-count">0</span>
+            </a>
+            <div class="dropdown-menu" id="cart-dropdown"></div>
           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="wishlist-icon" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-heart"></i>
+              <span class="badge rounded-pill bg-danger" id="wishlist-count">0</span>
+            </a>
+            <div class="dropdown-menu" id="wishlist-dropdown"></div>
+          </li>
+
+
+
         </ul>
       </div>
-    </div>
   </nav>
+  <!-- Nav end -->
+
+
   <div class="search-panel d-none" id="searchPanel">
     <div class="search-panel-inner p-4">
       <div class="seach-panel-close">
@@ -456,7 +301,7 @@
               </svg>
               <div class="ms-3">
                 <h6 class="text-uppercase mb-0">Free shipping &amp; return</h6>
-                <p class="text-muted text-sm mb-0">Free Shipping over $300</p>
+                <p class="text-muted text-sm mb-0">Free shipping on orders over ₱10,000</p>
               </div>
             </div>
           </div>
@@ -486,7 +331,7 @@
       </div>
     </div>
     <div class="py-5">
-      <!-- Footer -->
+      <!-- Main Block -->
       <div class="container py-5">
         <div class="row gx-5 gy-4">
           <div class="col-lg-4"><img class="mb-3" src="../assets/images/logo/logo.svg" alt="website-logo" width="180">
@@ -526,7 +371,8 @@
           </div>
           <div class="newsletter col-lg-4">
             <h5 class="text-white text-uppercase mb-4">Daily Offers &amp; Discounts</h5>
-            <p class="text-sm fw-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.
+            <p class="text-sm fw-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque
+              temporibus.
             </p>
             <form action="#" id="newsletter-form">
               <div class="input-group mb-3 border">
@@ -545,19 +391,22 @@
       <div class="container py-3">
         <div class="row align-items-center gy-3">
           <div class="col-md-6">
-            <p class="mb-0 text-sm fw-normal">&copy; 2021 <a class="reset-anchor"
-                href="https://github.com/Kashea/APIDRIVEN_ECOMMERCE_WEBSITE" target="_blank">Clothes Studio</a> All
+            <p class="mb-0 text-sm fw-normal">&copy; 2023 <a class="reset-anchor"
+                href="https://github.com/Kashea/APIDRIVEN_ECOMMERCE_WEBSITE" target="_blank">Clothes Studio</a>
+              All
               rights reserved.</p>
           </div>
           <div class="col-md-6">
             <ul class="list-inline text-lg-end mb-0">
               <li class="list-inline-item"><img
-                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/visa.5210170f.svg" alt="..." width="30"></li>
+                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/visa.5210170f.svg" alt="..." width="30">
+              </li>
               <li class="list-inline-item"><img
                   src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/mastercard.ea104053.svg" alt="..." width="30">
               </li>
               <li class="list-inline-item"><img
-                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/paypal.abed015f.svg" alt="..." width="30"></li>
+                  src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/paypal.abed015f.svg" alt="..." width="30">
+              </li>
               <li class="list-inline-item"><img
                   src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/western-union.5550a98f.svg" alt="..."
                   width="30"></li>
@@ -567,8 +416,8 @@
       </div>
     </div>
   </footer>
-  <button class="btn btn-primary btn-sm d-none d-lg-inline-block" type="button" data-bs-toggle="collapse"
-    data-bs-target="#style-switch" id="style-switch-button"><i class="fas fa-cog fa-2x"></i></button>
+  <!-- <button class="btn btn-primary btn-sm d-none d-lg-inline-block" type="button" data-bs-toggle="collapse"
+    data-bs-target="#style-switch" id="style-switch-button"><i class="fas fa-cog fa-2x"></i></button> -->
   <div class="collapse" id="style-switch">
     <h5>Select theme colour</h5>
     <form class="mb-3">
@@ -583,10 +432,6 @@
         <option value="css/style.blue.7a481f40.css">blue</option>
       </select>
     </form>
-    <p><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/template-mac.e1286699.png" alt="">
-    </p>
-    <p class="text-muted text-small">Stylesheet switching is done via JavaScript and can cause a blink while page loads.
-      This will not happen in your production code.</p>
   </div>
   <!-- JavaScript files-->
   <script src="https://d19m59y37dris4.cloudfront.net/hub/2-0/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
