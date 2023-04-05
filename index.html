@@ -305,7 +305,7 @@
                         class="fas fa-shopping-cart"></i></a> -->
                     <!-- <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a> -->
                     <li class="list-inline-item">
-                      <button class="btn btn-primary" onclick="addToCart(1, 'Lose Oversized Shirt', 65)"
+                      <button class="btn btn-primary" onclick="addToCart(1, 'Lose Oversized Shirt', 40)"
                         title="Add to cart">
                         <i class="fas fa-shopping-cart"></i>
                       </button>
@@ -316,7 +316,7 @@
                       <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
 
                     </li <li class="list-inline-item">
-                    <button class="btn btn-outline-secondary" onclick="addToWishlist(1, 'Lose Oversized Shirt', 65)"
+                    <button class="btn btn-outline-secondary" onclick="addToWishlist(1, 'Lose Oversized Shirt', 40)"
                       title="Add to wishlist">
                       <i class="far fa-heart"></i>
                     </button>
@@ -346,14 +346,24 @@
                   src="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-2.2e56091b.jpg" alt="product">
                 <div class="hover-overlay d-flex align-items-center justify-content-center">
                   <div class="CTA d-flex align-items-center justify-content-center">
-                    <a href="#" class="add-to-cart" data-id="1" data-name="Elegant Lake" data-price="40.00"
-                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
-                        class="fas fa-shopping-cart"></i></a>
-                    <a class="active" href="detail.html"><i class="fas fa-search"></i> View</a>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
-                    <a href="#" class="add-to-wishlist" data-id="1" data-name="Elegant Lake" data-price="40.00"
-                      data-img="https://d19m59y37dris4.cloudfront.net/hub/2-0/img/hoodie-man-1.3c6a080c.jpg"><i
-                        class="far fa-heart"></i></a>
+                    <li class="list-inline-item">
+                      <button class="btn btn-primary" onclick="addToCart(1, 'Lose Oversized Shirt', 40)"
+                        title="Add to cart">
+                        <i class="fas fa-shopping-cart"></i>
+                      </button>
+                    </li>
+
+                    <li class="list-inline-item">
+
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#productView"><i class="fas fa-expand"></i></a>
+
+                    </li <li class="list-inline-item">
+                    <button class="btn btn-outline-secondary" onclick="addToWishlist(1, 'Lose Oversized Shirt', 40)"
+                      title="Add to wishlist">
+                      <i class="far fa-heart"></i>
+                    </button>
+                    </li>
+
                   </div>
                 </div>
               </div>
@@ -1090,111 +1100,7 @@
   </script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <script>
-    class CartItem {
-      constructor(id, title, price) {
-        this.id = id;
-        this.title = title;
-        this.price = price;
-        this.quantity = 1;
-      }
-    }
-
-    let cart = [];
-    let wishlist = [];
-
-    function addToCart(id, title, price) {
-      const existingItem = cart.find(item => item.id === id);
-      if (existingItem) {
-        existingItem.quantity++;
-      } else {
-        const newItem = new CartItem(id, title, price);
-        cart.push(newItem);
-      }
-      updateCartDropdown();
-    }
-
-    function addToWishlist(id, title, price) {
-      const existingItem = wishlist.find(item => item.id === id);
-      if (!existingItem) {
-        const newItem = new CartItem(id, title, price);
-        wishlist.push(newItem);
-      }
-      updateWishlistDropdown();
-    }
-
-    function updateCartDropdown() {
-      let cartDropdownContent = '';
-      let totalQuantity = 0;
-      let totalPrice = 0;
-
-      cart.forEach(item => {
-        cartDropdownContent += `
-      <div class="dropdown-item">
-        <img src="https://via.placeholder.com/50" alt="Product Image">
-        <span>${item.title}</span>
-        <span>${item.quantity} x $${item.price}</span>
-        <button class="btn btn-sm btn-danger" onclick="removeFromCart(${item.id})">Remove</button>
-      </div>
-    `;
-        totalQuantity += item.quantity;
-        totalPrice += item.quantity * item.price;
-      });
-
-      cartDropdownContent += `
-    <div class="dropdown-item">
-      <strong>Total: $${totalPrice.toFixed(2)}</strong>
-    </div>
-    <div class="dropdown-item">
-      <button class="btn btn-primary" onclick="proceedToCheckout()">Proceed to checkout</button>
-    </div>
-  `;
-
-      document.querySelector('#cart-dropdown').innerHTML = cartDropdownContent;
-      document.querySelector('#cart-count').textContent = totalQuantity;
-    }
-
-    function updateWishlistDropdown() {
-      let wishlistDropdownContent = '';
-      let totalWishlistItems = 0;
-
-      wishlist.forEach(item => {
-        wishlistDropdownContent += `
-      <div class="dropdown-item">
-        <img src="https://via.placeholder.com/50" alt="Product Image">
-        <span>${item.title}</span>
-        <button class="btn btn-sm btn-danger" onclick="removeFromWishlist(${item.id})">Remove</button>
-      </div>
-    `;
-        totalWishlistItems++;
-      });
-
-      document.querySelector('#wishlist-dropdown').innerHTML = wishlistDropdownContent;
-      document.querySelector('#wishlist-count').textContent = totalWishlistItems;
-    }
-
-    function removeFromCart(id) {
-      const itemIndex = cart.findIndex(item => item.id === id);
-      if (itemIndex !== -1) {
-        cart.splice(itemIndex, 1);
-        updateCartDropdown();
-      }
-    }
-
-    function removeFromWishlist(id) {
-      const itemIndex = wishlist.findIndex(item => item.id === id);
-      if (itemIndex !== -1) {
-        wishlist.splice(itemIndex, 1);
-        updateWishlistDropdown();
-      }
-    }
-
-    function proceedToCheckout() {
-      alert('Proceeding to the checkout page...');
-    }
-
-
-  </script>
+  <script src="assets/js/cartupdate.js"></script>
 
 
 
