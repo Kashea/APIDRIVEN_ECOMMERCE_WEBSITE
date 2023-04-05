@@ -153,6 +153,7 @@
             </a>
             <div class="dropdown-menu" id="cart-dropdown"></div>
           </li>
+
           <li class="nav-item dropdown">
             <a class="nav-link" href="#" id="wishlist-icon" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
@@ -161,7 +162,6 @@
             </a>
             <div class="dropdown-menu" id="wishlist-dropdown"></div>
           </li>
-
 
 
         </ul>
@@ -1099,6 +1099,15 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <script src="assets/js/cartupdate.js"></script>
+
+  <script>
+    // Set cart items to local storage
+    localStorage.setItem('cartItems', JSON.stringify(cart));
+
+    // Set wishlist items to local storage
+    localStorage.setItem('wishlistItems', JSON.stringify(wishlist));
+
+  </script>
 
 
 
