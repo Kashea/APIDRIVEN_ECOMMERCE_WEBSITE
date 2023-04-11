@@ -58,6 +58,19 @@
   </div>
   <!-- Add more Swiper items with unique IDs and details as needed -->
 
+  <!-- cart page -->
+<div id="cart">
+  <!-- cart content -->
+  <button id="checkout-btn">Proceed to Checkout</button>
+</div>
+
+<!-- checkout page -->
+<div id="checkout">
+  <!-- checkout form -->
+  <button id="confirm-btn">Confirm Order</button>
+</div>
+
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
@@ -148,6 +161,67 @@
     }
 
 
+
+  </script>
+
+  <!-- history/storage api commands -->
+  <script>
+    // get cart data from localStorage
+let cartData = JSON.parse(localStorage.getItem('cartData'));
+
+// update cart badge count
+let cartBadge = document.getElementById('cart-badge');
+cartBadge.innerHTML = cartData.length;
+
+// add event listener to checkout button
+let checkoutBtn = document.getElementById('checkout-btn');
+checkoutBtn.addEventListener('click', function() {
+  // save cart data to localStorage
+  localStorage.setItem('cartData', JSON.stringify(cartData));
+  
+  // update browser history
+  history.pushState({ page: 'checkout' }, '', '/checkout');
+  
+  // hide cart and show checkout page
+  document.getElementById('cart').style.display = 'none';
+  document.getElementById('checkout').style.display = 'block';
+});
+
+// add event listener to confirm button
+let confirmBtn = document.getElementById('confirm-btn');
+confirmBtn.addEventListener('click', function() {
+  // get cart data from localStorage
+  let cartData = JSON.parse(localStorage.getItem('cartData'));
+  
+  // submit order with cart data
+  // ...
+  
+  // clear cart data from localStorage
+  localStorage.removeItem('cartData');
+  
+  // update browser history
+  history.pushState({ page: 'confirmation' }, '', '/confirmation');
+  
+  // hide checkout page and show confirmation page
+  document.getElementById('checkout').style.display = 'none';
+  document.getElementById('confirmation').style.display = 'block';
+});
+
+// listen for popstate event
+window.addEventListener('popstate', function(event) {
+  // check if we are on the checkout or confirmation page
+  if (event.state && (event.state.page === 'checkout' || event.state.page === 'confirmation')) {
+    // show/hide pages accordingly
+    document.getElementById('cart').style.display = 'none';
+    document.getElementById('checkout').style.display = event.state.page === 'checkout' ? 'block' : 'none';
+    document.getElementById('confirmation').style.display = event.state.page === 'confirmation' ? 'block' : 'none';
+  } else {
+    // show cart page by default
+    document.getElementById('cart').style.display = 'block';
+    document.getElementById('checkout').style.display = 'none';
+    document.getElementById('confirmation').style.display = 'none';
+  }
+});
 
   </script>
 </body>
