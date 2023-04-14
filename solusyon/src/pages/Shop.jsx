@@ -71,7 +71,7 @@ const Shop = () => {
       <section>
         <Container>
           <Row>
-            <Col lg='3' md='3'>
+            <Col lg='3' md='6'>
               <div className='filter_widget'>
                 <select onChange={handleFilter}>
                   <option>Filter By Category</option>
@@ -83,7 +83,7 @@ const Shop = () => {
                 </select>
               </div>
             </Col>
-            <Col lg='3' md='3'>
+            <Col lg='3' md='6' className='text-end'>
               <div className='filter_widget'>
                 <select>
                   <option>Sort By</option>
@@ -92,7 +92,7 @@ const Shop = () => {
                 </select>
               </div>
             </Col>
-            <Col lg='6' md='6'>
+            <Col lg='6' md='12'>
               <div className='search_box'>
                 <input
                   type='text'
