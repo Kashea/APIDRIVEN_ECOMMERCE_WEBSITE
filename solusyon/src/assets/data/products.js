@@ -95,22 +95,22 @@ const products = [
   },
   {
     id: "26",
-    productName: "Rivet Bigelow Modern ",
+    productName: "Acme Furniture Sofa",
     imgUrl: productImg02,
     category: "sofa",
     price: 253,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Velvet & Antique Platinum",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "The sofa with an antique platinum finish will create an elegant, warm, and traditional taste in your living room. The sofa reflects a highly decorative base with scrolled feet, and the upholstered seats with the deep button tufted and nailhead trim accents add classic character and represent luxurious detailing.",
     reviews: [
       {
-        rating: 4.8,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        rating: 4.9,
+        text: "Its perfect.",
       },
       {
         rating: 4.8,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Vintage and traditional style",
       },
     ],
     avgRating: 4.7,
@@ -168,17 +168,17 @@ const products = [
     category: "sofa",
     price: 163,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Genuine Sheepskin Rug Linen Real Australia Sheepskin Natural Luxury Fluffy Lambskin",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "Genuine PREMIUM 100% New Zealand & Australian Wool, Eco-friendly:Contains no harsh chemicals or dyes, just all natural fur that is safe for everyone in your home. Nontoxic, skin-friendly, Eco-friendly, perfect for baby and pregnancy. PERFECT GIFT IDEA: Warm in winter and cool in summer.",
     reviews: [
       {
         rating: 4.6,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "The color and craftmanship of this sheepskin rug is superb. Soft yet fluffy. Goes perfectly",
       },
       {
         rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Soft, thick, great length, perfect soft beige-cream color. Its perfect.",
       },
     ],
     avgRating: 4.7,
@@ -190,17 +190,17 @@ const products = [
     category: "chair",
     price: 99,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Century Modern Fabric Arm Chair",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "Blending together iconic splayed legs with beautifully tufted upholstery, our club chair offers a mid-century look to your lounge space. With its clean lines and understated look, this chair uses new materials to reimagine a traditional design. This chair is supported by beautifully tapered birch wood legs which offer an attractive look and durable structure. Its fine grain takes stains well, giving this piece a gorgeous finish.",
     reviews: [
       {
         rating: 4.6,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "I ordered this chair during Prime Days. It was a good buy and had some excellent reviews.",
       },
       {
         rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "I like it so much I’m going to buy another one!",
       },
     ],
     avgRating: 4.7,
@@ -213,17 +213,17 @@ const products = [
     category: "sofa",
     price: 173,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Loveseat/Sofa/Couch with Armrest Pockets",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "STYLE IN MINUTES with a timeless modern sofa to fit any room with the versatility you want. It's the perfect size for small spaces including college dorms, office spaces and smaller apartments. TOOL-FREE ASSEMBLY guarantees you'll have your sofa in 4 simple steps. TOOL-FREE ASSEMBLY guarantees you'll have your sofa in 4 simple steps ",
     reviews: [
       {
         rating: 4.6,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Easy assembly, no tools required, comfortable clean and great value for the price. Using it in my private practice office.",
       },
       {
         rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Good couch in good price :) Super easy to assemble (took less than 20 min) and comfortable.",
       },
     ],
     avgRating: 4.7,
@@ -236,17 +236,17 @@ const products = [
     category: "chair",
     price: 89,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "LeatherSoft Executive Swivel",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "To ensure proper assembly, please follow all steps provided in the installation manual provided in pdf below. Give yourself and office a boost with this stylish mid-back white LeatherSoft desk chair. This chair is easy on the eyes and offers plenty of comfort with its thickly padded seat and waterfall seat edge. Assembly required .Our chair conforms to ANSI/BIFMA standard X5.1-17.",
     reviews: [
       {
         rating: 4.6,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "I read a lot of reviews prior to buying.",
       },
       {
         rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Really nice chair. Great purchase!",
       },
     ],
     avgRating: 4.7,
@@ -259,17 +259,17 @@ const products = [
     category: "chair",
     price: 112,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Extra Wide Arms,Back Support 14 Angles Adjustable Comfortable Double Mesh Fabric",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "High backrest is capable of providing comfortable support to your tired body, relieving your back muscle fatigue and enabling a better relaxation. Compared with armless floor chair, it delicately equipped with armrest shall take the comfortableness to the next level. Also, it will perfectly fit well with your body curve thanks to its ergonomic design. This fabric does not absorb water and is dry in no time or minutes.The material is also tear-resistant, and does not lose any fuzz at rubbing points.The mesh fabric features excellent breathability and soft tactility, that’s why this lazy soft chair adopts such material instead of others. Plus, filled with premium high resilience sponge inside, it is not easy to sag while avoid discomfort even sitting there for long time.",
     reviews: [
       {
         rating: 4.6,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Chairs nice but backrest is too small",
       },
       {
         rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Really nice chair. Great purchase!",
       },
     ],
     avgRating: 4.7,
@@ -282,17 +282,17 @@ const products = [
     category: "mobile",
     price: 799,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Apple iPhone 12 Pro, 128GB, Pacific Blue - Unlocked (Renewed Premium)",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "Tested for battery health and guaranteed to come with a battery that exceeds 90% of original capacity. ncludes a brand new, generic charging cable that is certified Mfi (Made for iPhone) and a brand new, generic wall plug that is UL certified for performance and safety. Also includes a SIM tray removal tool but does not come with headphones or a SIM card. Backed by a one-year satisfaction guarantee.",
     reviews: [
       {
         rating: 4.8,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Very pleased with my Renewed Premium iPhone 12 Pro purchase",
       },
       {
         rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Phone as described 100% battery health …",
       },
     ],
     avgRating: 4.8,
@@ -304,17 +304,17 @@ const products = [
     category: "chair",
     price: 99,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Century Modern Fabric Arm Chair",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "Blending together iconic splayed legs with beautifully tufted upholstery, our club chair offers a mid-century look to your lounge space. With its clean lines and understated look, this chair uses new materials to reimagine a traditional design. This chair is supported by beautifully tapered birch wood legs which offer an attractive look and durable structure. Its fine grain takes stains well, giving this piece a gorgeous finish.",
     reviews: [
       {
         rating: 4.6,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "I ordered this chair during Prime Days. It was a good buy and had some excellent reviews.",
       },
       {
         rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "I like it so much I’m going to buy another one!",
       },
     ],
     avgRating: 4.7,
@@ -326,17 +326,17 @@ const products = [
     category: "mobile",
     price: 799,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Apple iPhone 12 Pro Max, 256GB, Pacific Blue - Unlocked (Renewed Premium)",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "Tested for battery health and guaranteed to come with a battery that exceeds 90% of original capacity. Inspected and guaranteed to have minimal cosmetic damage, which is not noticeable when the device is held at arm's length. Successfully passed a full diagnostic test which ensures like-new functionality and removal of any prior-user personal information. ncludes a brand new, generic charging cable that is certified Mfi (Made for iPhone) and a brand new, generic wall plug that is UL certified for performance and safety. Also includes a SIM tray removal tool but does not come with headphones or a SIM card. ",
     reviews: [
       {
         rating: 4.8,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Overall good phone so far",
       },
       {
         rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Perfect condition!! As it says like new!! I’m really happy with it. The packaging, the condition 100%",
       },
     ],
     avgRating: 4.8,
@@ -349,17 +349,17 @@ const products = [
     category: "mobile",
     price: 599,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "realme 8 5G + 4G Volte GSM Unlocked Global USA Latin Europe Octa Core 48MP Triple Camera",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "Octa-core, up to 2.2 GHz GPU ARM Mali-G57 / 18 W fast charging connector 5000mAh high-capacity battery. 6.5 inch full screen display High refresh rate of 90 Hz Resolution: 1080 × 2400 FHD + 48MP Triple camera with night photo mode + 16Mp front Camera. Bluetooth 5.1 / NFC / wifi 2.4 / 5 GHz GPS / A-GPS / BEIDOU / GALILEO / QZSS / GLONASS ",
     reviews: [
       {
         rating: 4.8,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Excellent rapport qualité/performance/prix",
       },
       {
         rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Excellent smartphone ",
       },
     ],
     avgRating: 4.8,
@@ -372,17 +372,17 @@ const products = [
     category: "mobile",
     price: 799,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "OnePlus Nord N200 | 5G Unlocked Android Smartphone U.S Version | 6.49 Full HD+LCD Screen",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "5G Unlocked for T-mobile and Google Fi. 4G Compatible with T-Mobile, AT&T, Verizon and Google Fi. Powered by the latest Qualcomm 5G chipset, the OnePlus Nord N200 5G allows you to download or stream your favorite TV shows, connect with your social media, and play online multiplayer at blazing fast speeds. Large 5000mAh battery - The OnePlus Nord N200 5G is powered by a massive 5000mAh battery, providing all the power required to get you through the day. Watch hours of TV, play graphically intense games, or browse the internet non-stop without fear of your device dying. ",
     reviews: [
       {
         rating: 4.8,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Extremely durable phone",
       },
       {
         rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Thanks as discriber. I need a phone for traveling this one does the job.",
       },
     ],
     avgRating: 4.8,
@@ -395,17 +395,17 @@ const products = [
     category: "mobile",
     price: 899,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "iPhone 13 Pro, 128GB, Sierra Blue - Unlocked (Renewed Premium)",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "Tested for battery health and guaranteed to come with a battery that exceeds 90% of original capacity. nspected and guaranteed to have minimal cosmetic damage, which is not noticeable when the device is held at arm’s length. Successfully passed a full diagnostic test which ensures like-new functionality and removal of any prior-user personal information. Backed by the same one-year satisfaction guarantee as brand new Apple products. ",
     reviews: [
       {
         rating: 4.8,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Reviewing after 3 months. I will definitely recommend.",
       },
       {
         rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Experience has been good so far. Battery health 100% No cosmetic defect other than a tiny scratch on screen which is acceptable since its not obvious. ",
       },
     ],
     avgRating: 4.8,
@@ -418,17 +418,17 @@ const products = [
     category: "mobile",
     price: 699,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "SAMSUNG Galaxy S22 Cell Phone, Factory Unlocked Android Smartphone, 128GB, 8K Camera & Video, Night Mode, Brightest Display Screen, 50MP Photo Resolution",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "NIGHTOGRAPHY plus PORTAIT MODE: Capture the night with crystal clear, bright pics and videos, no matter the lighting with Night Mode; Portrait Mode auto-detects and adjusts to what you want front and center, making all your photos worthy of a frame. 50MP PHOTO RESOLUTION plus BRIGHT DISPLAY: From elaborate landscapes to intricate creations, capture vivid detail with 50MP resolution; Your favorite content will look even more epic on our brightest display ever with Vision Booster ",
     reviews: [
       {
         rating: 4.8,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Nice size and fast response.",
       },
       {
         rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Fantastic phone, fantastic price.",
       },
     ],
     avgRating: 4.8,
@@ -441,17 +441,17 @@ const products = [
     category: "watch",
     price: 299,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Rolex ROLEX GMT Master 126710BLRO Black Dial Watch Men's (W224631) [Parallel Import], Bracelet",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "Materials: Stainless steel, ceramic, stainless steel. Water Resistance: Water resistant to 328.4 ft (100 m). Accessories: Includes official box, instruction manual (English language not guaranteed). Product Condition: Brand new. Store display item. Please contact us for details. Product Description: 2018 model. GMT Master II 126710BLRO Stainless Steel Blue Red Bezel Jubilee Bracelet. The bezel is also known as the Pepsi color, and has a dignified gimsy reminiscent of the GMT of yesteryear.",
     reviews: [
       {
         rating: 4.8,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Nice Watch",
       },
       {
         rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Worth it",
       },
     ],
     avgRating: 4.8,
