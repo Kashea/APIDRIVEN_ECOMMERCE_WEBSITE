@@ -36,13 +36,13 @@ const products = [
     category: "sofa",
     price: 193,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Extra Deep Down Filled Couch W, 89 Sofa, Cream",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "This couch, with its deep cushions and sturdy frame, will help you add maximum comfort and style to any living space in your home. Never believe that you have to sacrifice comfort for style—this couch has it both in spades. Solid wood frame and block legs with durable 100% polyester fabric upholstery, heavy-duty webbing, and down-filled cushions",
     reviews: [
       {
         rating: 4.7,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Stylish, comfortable, deep seat and affordable. I love this couch. If you have little kids and animals maybe darker color bc it’s not slipcover but very comfortable.",
       },
     ],
     avgRating: 4.5,
@@ -55,17 +55,17 @@ const products = [
     category: "sofa",
     price: 253,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Modern Leather Sofa Couch, 80 W, Caramel",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "This modern sofa features simple lines and square armrests atop tall tapered legs, giving it a minimalist feel that looks great with most decor styles. Hardwood frame, solid beech wood legs and durable leather upholstery stand up to wear and tear. Wipe clean with a soft, dry cloth.",
     reviews: [
       {
-        rating: 4.8,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        rating: 4.5,
+        text: "I agree that this doesn't really seem like real leather, definitely pretty low quality if it is.  ",
       },
       {
         rating: 4.8,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "The one thing I can't complain about is how super durable it is.",
       },
     ],
     avgRating: 4.7,
@@ -78,17 +78,17 @@ const products = [
     category: "sofa",
     price: 173,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Rivet Aiden Mid-Century Modern Sofa Couch (86.6 W) - Wathet Blue",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "This sleek, mid-Century inspired sofa is designed to impress. A tufted bench seat cushion, plush back cushions, tapered wood legs, and tidy bolster pillows provide just the right mix of comfort and contemporary edge. Solid hardwood frame, tapered wood legs and foam padding with fabric upholstery.",
     reviews: [
       {
         rating: 4.6,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "I originally bought one (1) 87 black leather sofa and two (2) matching chairs.",
       },
       {
         rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "As for price, this gets tricky.",
       },
     ],
     avgRating: 4.7,
@@ -122,17 +122,17 @@ const products = [
     category: "sofa",
     price: 163,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Genuine Sheepskin Rug Linen Real Australia Sheepskin Natural Luxury Fluffy Lambskin ",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "Genuine PREMIUM 100% New Zealand & Australian Wool, Eco-friendly:Contains no harsh chemicals or dyes, just all natural fur that is safe for everyone in your home. Nontoxic, skin-friendly, Eco-friendly, perfect for baby and pregnancy. PERFECT GIFT IDEA: Warm in winter and cool in summer. ",
     reviews: [
       {
         rating: 4.6,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "The color and craftmanship of this sheepskin rug is superb. Soft yet fluffy. Goes perfectly",
       },
       {
         rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "Soft, thick, great length, perfect soft beige-cream color. Its perfect.",
       },
     ],
     avgRating: 4.7,
@@ -145,17 +145,17 @@ const products = [
     category: "sofa",
     price: 163,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Amazon Brand - Faux Velvet Sofa Contemporary Velvet Sofa Couch",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "Sleek, bench seat design combines with modern touches for a vesatile, elegant sofa. A solid-wood frame and strong brass legs offer durability and comfort that will stand the test of time. Solid-wood frame with brass metal legs and glam velvet upholstery. Bench seat cushion with removable back cushions",
     reviews: [
       {
         rating: 4.6,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "The sofa also has some elegant lines. I like the gold/bronze feet, and the curved sides.",
       },
       {
         rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        text: "I do like the sofa. It’s good for a smaller space and is 5-10 inches shorter than most full size sofas.",
       },
     ],
     avgRating: 4.7,
