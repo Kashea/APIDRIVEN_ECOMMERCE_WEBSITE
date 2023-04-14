@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Shop - Test Environment</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    integrity="sha512-6FmsEN6d9U6fUhT57lMbT6TJFopwIZ+w1iLdpN0KfkPbZQaQ9XfNLG/1LLIWz/TTz5m5EL5UD5oD2ETm5L5Hxw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-jJNYcB1YMX9Gl6nVDU6vBByERo0n6+vHf0MclFbO76pfNSIK0M+vK9XWNRxQ+aQMeIjbmKj0Ohd5i5qyD12jKQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Shop Name</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-lg-9 order-2 order-lg-1">
+          <h1>Shop</h1>
+          <p class="lead text-muted">Check out our latest products</p>
+        </div>
+        <div class="col-lg-3 text-end order-1 order-lg-2">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb py-4 justify-content-lg-end mb-0">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active">Shop</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Grid Section -->
+  <section class="py-5">
+    <div class="container py-5">
+      <div class="row">
+        <!-- Filters -->
+        <div class="col-lg-3">
+          <h5 class="mb-4">Filters</h5>
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Category</label>
+              <select class="form-select">
+                <option selected>All</option>
+                <option value="1">Clothing</option>
+                <option value="2">Shoes</option>
+                <option value="3">Accessories</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Price</label>
+              <div class="range-slider">
+                <input type="range" min="0" max="1000" step="10" value="500" data-rangeslider>
+                <div class="range-value">
+                  <small class="text-muted">$0</small>
+                  <small class="text-muted">$1000</small>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Size</label>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="s-size">
+                <label class="form-check-label" for="s-size">Small</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="m-size">
+                <label class="form-check-label" for="m-size">Medium</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="l-size">
+                <label class="form-check-label" for="l-size">Large</label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Apply Filters</button>
+          </form>
+        </div>
+
+        <!-- Product List -->
+        <section class="py-5">
+          <div class="container py-5">
+            <div class="row">
+              <div class="col-lg-9">
+                <h2 class="mb-4">Sneakers</h2>
+              </div>
+              <div class="col-lg-3">
+                <select class="form-select">
+                  <option selected>Sort by popularity</option>
+                  <option value="1">Sort by average rating</option>
+                  <option value="2">Sort by latest</option>
+                  <option value="3">Sort by price: low to high</option>
+                  <option value="4">Sort by price: high to low</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card border-0 shadow">
+                  <div class="card-img-top overflow-hidden gradient-overlay">
+                    <img class="img-fluid" src="assets/img/shop-item-1.jpg" alt="...">
+                    <a href="#" class="tile-link"></a>
+                    <div class="card-img-overlay-top d-flex justify-content-between align-items-center">
+                      <div>
+                        <a href="#" class="badge bg-secondary text-white me-2">Sneakers</a>
+                        <a href="#" class="badge bg-secondary text-white">Nike</a>
+                      </div>
+                      <div class="heart-icon">
+                        <a href="#">
+                          <i class="far fa-heart"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <a href="#" class="h3 text-decoration-none text-dark">Air Force 1 '07</a>
+                    <p class="text-muted">$90.00</p>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary"
+                          onclick="decrease(this)">-</button>
+                        <input type="text" class="form-control form-control-sm quantity-no" value="1">
+                        <button type="button" class="btn btn-sm btn-outline-secondary"
+                          onclick="increase(this)">+</button>
+                      </div>
+                      <a href="#" class="btn btn-sm btn-primary ms-3" onclick="addToCart(this)">Add to cart</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card border-0 shadow">
+                  <div class="card-img-top overflow-hidden gradient-overlay">
+                    <img class="img-fluid" src="assets/img/shop-item-1.jpg" alt="...">
+                    <a href="#" class="tile-link"></a>
+                    <div class="card-img-overlay-top d-flex justify-content-between align-items-center">
+                      <div>
+                        <a href="#" class="badge bg-secondary text-white me-2">Sneakers</a>
+                        <a href="#" class="badge bg-secondary text-white">Nike</a>
+                      </div>
+                      <div class="heart-icon">
+                        <a href="#">
+                          <i class="far fa-heart"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <a href="#" class="h3 text-decoration-none text-dark">Air Force 1 '07</a>
+                    <p class="text-muted">$90.00</p>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary"
+                          onclick="decrease(this)">-</button>
+                        <input type="text" class="form-control form-control-sm quantity-no" value="1">
+                        <button type="button" class="btn btn-sm btn-outline-secondary"
+                          onclick="increase(this)">+</button>
+                      </div>
+                      <a href="#" class="btn btn-sm btn-primary ms-3" onclick="addToCart(this)">Add to cart</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card border-0 shadow">
+                  <div class="card-img-top overflow-hidden gradient-overlay">
+                    <img class="img-fluid" src="assets/img/shop-item-1.jpg" alt="...">
+                    <a href="#" class="tile-link"></a>
+                    <div class="card-img-overlay-top d-flex justify-content-between align-items-center">
+                      <div>
+                        <a href="#" class="badge bg-secondary text-white me-2">Sneakers</a>
+                        <a href="#" class="badge bg-secondary text-white">Nike</a>
+                      </div>
+                      <div class="heart-icon">
+                        <a href="#">
+                          <i class="far fa-heart"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <a href="#" class="h3 text-decoration-none text-dark">Air Force 1 '07</a>
+                    <p class="text-muted">$90.00</p>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary"
+                          onclick="decrease(this)">-</button>
+                        <input type="text" class="form-control form-control-sm quantity-no" value="1">
+                        <button type="button" class="btn btn-sm btn-outline-secondary"
+                          onclick="increase(this)">+</button>
+                      </div>
+                      <a href="#" class="btn btn-sm btn-primary ms-3" onclick="addToCart(this)">Add to cart</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card border-0 shadow">
+                  <div class="card-img-top overflow-hidden gradient-overlay">
+                    <img class="img-fluid" src="assets/img/shop-item-1.jpg" alt="...">
+                    <a href="#" class="tile-link"></a>
+                    <div class="card-img-overlay-top d-flex justify-content-between align-items-center">
+                      <div>
+                        <a href="#" class="badge bg-secondary text-white me-2">Sneakers</a>
+                        <a href="#" class="badge bg-secondary text-white">Nike</a>
+                      </div>
+                      <div class="heart-icon">
+                        <a href="#">
+                          <i class="far fa-heart"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <a href="#" class="h3 text-decoration-none text-dark">Air Force 1 '07</a>
+                    <p class="text-muted">$90.00</p>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary"
+                          onclick="decrease(this)">-</button>
+                        <input type="text" class="form-control form-control-sm quantity-no" value="1">
+                        <button type="button" class="btn btn-sm btn-outline-secondary"
+                          onclick="increase(this)">+</button>
+                      </div>
+                      <a href="#" class="btn btn-sm btn-primary ms-3" onclick="addToCart(this)">Add to cart</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card border-0 shadow">
+                  <div class="card-img-top overflow-hidden gradient-overlay">
+                    <img class="img-fluid" src="assets/img/shop-item-1.jpg" alt="...">
+                    <a href="#" class="tile-link"></a>
+                    <div class="card-img-overlay-top d-flex justify-content-between align-items-center">
+                      <div>
+                        <a href="#" class="badge bg-secondary text-white me-2">Sneakers</a>
+                        <a href="#" class="badge bg-secondary text-white">Nike</a>
+                      </div>
+                      <div class="heart-icon">
+                        <a href="#">
+                          <i class="far fa-heart"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <a href="#" class="h3 text-decoration-none text-dark">Air Force 1 '07</a>
+                    <p class="text-muted">$90.00</p>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary"
+                          onclick="decrease(this)">-</button>
+                        <input type="text" class="form-control form-control-sm quantity-no" value="1">
+                        <button type="button" class="btn btn-sm btn-outline-secondary"
+                          onclick="increase(this)">+</button>
+                      </div>
+                      <a href="#" class="btn btn-sm btn-primary ms-3" onclick="addToCart(this)">Add to cart</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+      <!-- Pagination-->
+      <nav aria-label="Pagination">
+        <hr class="my-0">
+        <ul class="pagination justify-content-center my-4">
+          <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item"><a class="page-link" href="#">5</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
